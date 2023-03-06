@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewmodel="clr-namespace:GearInsight.ViewModels"
+             x:DataType="viewmodel:MainPageViewModel"
+             x:Class="GearInsight.MainPage"
+             Shell.NavBarIsVisible="False">
+
+
+    <AbsoluteLayout>
+        <toolkit:MediaElement 
+                      AbsoluteLayout.LayoutBounds="0, 0, 1680, 1050"
+                      x:Name="mediaElement"
+                      ShouldAutoPlay="False"
+                      ShouldLoopPlayback="True"
+                      ShouldShowPlaybackControls="False"
+                      Source="embed://sylvanas.mp4"
+                      CompressedLayout.IsHeadless="True"
+                      Aspect="Fill"
+                      />
+
+        <Button AbsoluteLayout.LayoutBounds="1495, 2" 
+                Text="Start/Stop Animation" 
+                x:Name="Play" 
+                Clicked="Play_Clicked" 
+                HeightRequest="20"
+                BackgroundColor="#342f2d"
+                BorderColor="#1a1a1a"                
+                BorderWidth="2"
+                CornerRadius="5"              
+                HorizontalOptions="Center"
+                
+                
+                ></Button>
+
+        <Entry AbsoluteLayout.LayoutBounds="750, 500" 
+                   x:Name="CharacterName"
+                   Placeholder="Enter character name"
+                   HorizontalOptions="Center" 
+                   WidthRequest="175"
+                   BackgroundColor="White"
+                   PlaceholderColor="#9d9d9d"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#1a1716"
+                   Text="{Binding CharacterName}"
+               ></Entry>
+
+
+
+        <Entry AbsoluteLayout.LayoutBounds="714, 550"
+                   Placeholder="Enter realm"
+                   PlaceholderColor="#9d9d9d"
+                   WidthRequest="250"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   BackgroundColor="White"
+                   TextColor="#1a1716"
+                   HorizontalOptions="Center"
+                   Text="{Binding Realm}"
+               ></Entry>
+
+        <Button AbsoluteLayout.LayoutBounds="768, 650"
+                HeightRequest="25"
+                x:Name="GetCharacter"
+                Text="Search Character"
+                BackgroundColor="#342f2d"
+                BorderColor="#1a1a1a"                
+                BorderWidth="2"
+                CornerRadius="5"              
+                HorizontalOptions="Center"
+                Command="{Binding GetCharacterCommand}"
+                ></Button>
+
+
+
+    </AbsoluteLayout>
+
+
+
+
+
+  
+        
+
+
+
+    
+</ContentPage>
