@@ -21,6 +21,13 @@ namespace GearInsight.Models
 
             if (stats.Success)
             {
+                App.UltimateCharacter.Mastery.Rating = Helpers.ExtractRatingFromStats(stats.Value.Mastery.ToString());
+                App.UltimateCharacter.Mastery.Percent = Helpers.ExtractPercentFromStats(stats.Value.Mastery.ToString());
+                App.UltimateCharacter.Versatility = stats.Value.Versatility.ToString();
+                App.UltimateCharacter.Health = stats.Value.Health.ToString();
+                App.UltimateCharacter.Stamina = stats.Value.Stamina.Effective.ToString();
+                App.UltimateCharacter.Power.Rating = stats.Value.Power;
+
                 if (App.UltimateCharacter.PlayedClass == "Warrior" || App.UltimateCharacter.PlayedClass == "Death Knight" || App.UltimateCharacter.ActiveSpec == "Retribution" || App.UltimateCharacter.ActiveSpec == "Protection")
                 {
                     App.UltimateCharacter.Strength.Rating = stats.Value.Strength.Effective;
@@ -32,6 +39,10 @@ namespace GearInsight.Models
 
                     App.UltimateCharacter.MeleeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeHaste.ToString());
                     App.UltimateCharacter.MeleeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeHaste.ToString());
+
+                    App.UltimateCharacter.VersatilityPercent = SetVersPercent((double)App.UltimateCharacter.MeleeHaste.Percent, (double)App.UltimateCharacter.MeleeCrit.Percent, (double)App.UltimateCharacter.Mastery.Percent);
+                    
+                    
                 }
                 else if (App.UltimateCharacter.PlayedClass == "Rogue" || App.UltimateCharacter.PlayedClass == "Demon Hunter" || (App.UltimateCharacter.PlayedClass == "Hunter" && App.UltimateCharacter.ActiveSpec == "Survival") || App.UltimateCharacter.ActiveSpec == "Windwalker" || App.UltimateCharacter.ActiveSpec == "Brewmaster" || App.UltimateCharacter.ActiveSpec == "Enhancement" || App.UltimateCharacter.ActiveSpec == "Feral" || App.UltimateCharacter.ActiveSpec == "Guardian")
                 {
@@ -44,6 +55,9 @@ namespace GearInsight.Models
 
                     App.UltimateCharacter.MeleeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeHaste.ToString());
                     App.UltimateCharacter.MeleeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeHaste.ToString());
+
+                    App.UltimateCharacter.VersatilityPercent = SetVersPercent((double)App.UltimateCharacter.MeleeHaste.Percent, (double)App.UltimateCharacter.MeleeCrit.Percent, (double)App.UltimateCharacter.Mastery.Percent);
+
                 }
                 else if (App.UltimateCharacter.PlayedClass == "Hunter")
                 {
@@ -56,6 +70,9 @@ namespace GearInsight.Models
 
                     App.UltimateCharacter.RangeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.RangedCrit.ToString());
                     App.UltimateCharacter.RangeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.RangedCrit.ToString());
+
+                    App.UltimateCharacter.VersatilityPercent = SetVersPercent((double)App.UltimateCharacter.RangeHaste.Percent, (double)App.UltimateCharacter.RangeCrit.Percent, (double)App.UltimateCharacter.Mastery.Percent);
+
 
                 }
                 else if (App.UltimateCharacter.PlayedClass == "Mage" || App.UltimateCharacter.PlayedClass == "Warlock" || App.UltimateCharacter.PlayedClass == "Priest" || App.UltimateCharacter.PlayedClass == "Evoker" || App.UltimateCharacter.ActiveSpec == "Mistweaver" || App.UltimateCharacter.PlayedClass == "Shaman" || App.UltimateCharacter.ActiveSpec == "Balance" || App.UltimateCharacter.PlayedClass == "Restoration" || App.UltimateCharacter.PlayedClass == "Holy")
@@ -70,15 +87,25 @@ namespace GearInsight.Models
                     App.UltimateCharacter.SpellCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.SpellCrit.ToString());
                     App.UltimateCharacter.SpellCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.SpellCrit.ToString());
 
-                }
+                    App.UltimateCharacter.VersatilityPercent = SetVersPercent((double)App.UltimateCharacter.SpellHaste.Percent, (double)App.UltimateCharacter.SpellCrit.Percent, (double)App.UltimateCharacter.Mastery.Percent);
 
-                App.UltimateCharacter.Mastery.Rating = Helpers.ExtractRatingFromStats(stats.Value.Mastery.ToString());
-                App.UltimateCharacter.Mastery.Percent = Helpers.ExtractPercentFromStats(stats.Value.Mastery.ToString());
-                App.UltimateCharacter.Versatility = stats.Value.Versatility.ToString();
-                App.UltimateCharacter.Health = stats.Value.Health.ToString();
-                App.UltimateCharacter.Power.Rating = stats.Value.Power;
+                }
+               
+
+                
+
+
             }
 
+        }
+
+        private static string SetVersPercent(double haste, double crit, double mastery)
+        {
+            double vers = Math.Round((crit + haste + mastery), 2);
+            vers = 100 - vers;
+
+
+            return vers.ToString();
         }
     }
 }

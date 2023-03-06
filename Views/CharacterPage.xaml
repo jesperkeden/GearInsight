@@ -519,6 +519,131 @@
 
         </VerticalStackLayout>
 
+        <Grid AbsoluteLayout.LayoutBounds="500, 800" RowDefinitions="50, 50" ColumnDefinitions="200, 200, 200, 200">
+
+
+            <Grid Grid.Row="0" Grid.Column="0" ColumnDefinitions="50, 200" Padding="5">
+
+                <Image Source="health.png"></Image>
+
+                <Grid Grid.Column="1" RowDefinitions="*,*" >
+
+                    <Label Text="{Binding Health, Source={Static local:App.UltimateCharacter}}"
+                           TextColor="AliceBlue"></Label>
+
+                    <Label Grid.Row="1" Text="Health"></Label>
+                </Grid>
+                
+                
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="0" ColumnDefinitions="50, 200" Padding="5">
+
+                <Image Source="crit.png"></Image>
+
+                <Grid Grid.Column="1" RowDefinitions="*,*" >
+
+                    <Label x:Name="CritStat" Text="{Binding SpellCrit.Percent, Source={Static local:App.UltimateCharacter}}"
+                           TextColor="AliceBlue"></Label>
+
+                    <Label Grid.Row="1" Text="Crit"></Label>
+                </Grid>
+
+
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="1" ColumnDefinitions="50, 200" Padding="5">
+
+                <Image Source="mana.png" x:Name="PowerImg"></Image>
+
+                <Grid Grid.Column="1" RowDefinitions="*,*" >
+
+                    <Label x:Name="PowerStat" Text="{Binding Power.Rating, Source={Static local:App.UltimateCharacter}}"
+                           TextColor="AliceBlue"></Label>
+
+                    <Label x:Name="PowerLable"  Grid.Row="1" Text="Mana"></Label>
+                </Grid>
+
+
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="1" ColumnDefinitions="50, 200" Padding="5">
+
+                <Image Source="haste.png"></Image>
+
+                <Grid Grid.Column="1" RowDefinitions="*,*" >
+
+                    <Label x:Name="HasteStat" Text="{Binding SpellHaste.Percent, Source={Static local:App.UltimateCharacter}}"
+                           TextColor="AliceBlue"></Label>
+
+                    <Label Grid.Row="1" Text="Haste"></Label>
+                </Grid>
+
+
+            </Grid>
+
+            <Grid Grid.Row="0" Grid.Column="2" ColumnDefinitions="50, 200" Padding="5">
+
+                <Image x:Name="BaseStatImg" Source="intellect.png"></Image>
+
+                <Grid Grid.Column="1" RowDefinitions="*,*" >
+
+                    <Label x:Name="BaseStat" Text="{Binding Intellect.Rating, Source={Static local:App.UltimateCharacter}}"
+                           TextColor="AliceBlue"></Label>
+
+                    <Label Grid.Row="1" Text="Intellect"></Label>
+                </Grid>
+
+
+            </Grid>
+
+            <Grid Grid.Row="1" Grid.Column="2" ColumnDefinitions="50, 200" Padding="5">
+
+                <Image Source="mastery.png" ToolTipProperties.Text="{Binding Mastery.Rating, Source={Static local:App.UltimateCharacter}}"></Image>
+
+                <Grid Grid.Column="1" RowDefinitions="*,*" >
+
+                    <Label x:Name="MasteryStat" Text="{Binding Mastery.Percent, Source={Static local:App.UltimateCharacter}}"
+                           TextColor="AliceBlue"></Label>
+
+                    <Label Grid.Row="1" Text="Mastery"></Label>
+                </Grid>
+
+
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3" ColumnDefinitions="50, 200" Padding="5">
+
+                <Image Source="stamina.png"></Image>
+
+                <Grid Grid.Column="1" RowDefinitions="*,*" >
+
+                    <Label Text="{Binding Stamina, Source={Static local:App.UltimateCharacter}}"
+                           TextColor="AliceBlue"></Label>
+
+                    <Label Grid.Row="1" Text="Stamina"></Label>
+                </Grid>
+
+
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="3" ColumnDefinitions="50, 200" Padding="5">
+
+                <Image Source="versatility.png"></Image>
+
+                <Grid Grid.Column="1" RowDefinitions="*,*" >
+
+                    <Label x:Name="VersStat" Text="{Binding VersatilityPercent, Source={Static local:App.UltimateCharacter}}"
+                           TextColor="AliceBlue"></Label>
+
+                    <Label Grid.Row="1" Text="Versatility"></Label>
+                </Grid>
+
+
+            </Grid>
+
+
+
+
+        </Grid>
 
     </AbsoluteLayout>
 </ContentPage>

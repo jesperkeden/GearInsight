@@ -61,6 +61,8 @@ namespace GearInsight.Models
         public Stats Power { get; set; } = new Stats();
         public string Health { get; set; }
         public string Versatility { get; set; }
+        public string Stamina { get; set; }
+        public string VersatilityPercent { get; set; }
 
 
 
