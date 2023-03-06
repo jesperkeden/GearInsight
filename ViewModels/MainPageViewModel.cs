@@ -9,6 +9,9 @@ using GearInsight.Models;
 using GearInsight.Services;
 using GearInsight.Views;
 using MongoDB.Driver;
+using CommunityToolkit.Maui.Views;
+using CommunityToolkit.Maui.Core.Views;
+using CommunityToolkit.Maui.Core.Handlers;
 
 namespace GearInsight.ViewModels
 {
@@ -19,15 +22,26 @@ namespace GearInsight.ViewModels
         string characterName;
         [ObservableProperty]
         string realm;
+        [ObservableProperty]
+        string error;
 
         [RelayCommand]
         public async Task GetCharacterAsync()
         {
-            Task GC = Mongo.CreateCharacter(CharacterName, Realm);
-            await GC;
-            //var page = new CharacterPage();
-            //page.BindingContext = TheCharacter.UltimateCharacter;
-            await Shell.Current.GoToAsync(nameof(CharacterPage));
+            var characterExist = CharacterProfile.CheckIfCharacterExist(CharacterName, Realm);
+            if (await characterExist == true)
+            {
+                Task GC = Mongo.CreateCharacter(CharacterName, Realm);
+                await GC;
+                //var page = new CharacterPage();
+                //page.BindingContext = TheCharacter.UltimateCharacter;
+                await Shell.Current.GoToAsync(nameof(CharacterPage));
+            }
+            else
+            {
+                Error = $"Character not found. Try again";
+            }
+            
         }
     }
 }

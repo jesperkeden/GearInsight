@@ -47,7 +47,7 @@
                    Text="{Binding CharacterName}"
                ></Entry>
 
-
+        <Label x:Name="ErrorMsg" AbsoluteLayout.LayoutBounds="815, 460" Text="{Binding Error}" TextColor="Black"></Label>
 
         <Entry AbsoluteLayout.LayoutBounds="714, 550"
                    Placeholder="Enter realm"

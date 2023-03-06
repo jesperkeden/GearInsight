@@ -42,6 +42,12 @@ namespace GearInsight.Services
 
         public static async Task CreateCharacter(string name, string realm)
         {
+            if (true)
+            {
+
+            }
+            
+            
             IMongoCollection<Character> fetchCharacterList = await FetchDatabase();
             var checkIfCharacterExist = CheckIfCharacterExist(name, realm, fetchCharacterList);
 
