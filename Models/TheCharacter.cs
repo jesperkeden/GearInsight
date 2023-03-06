@@ -1,8 +1,10 @@
-﻿namespace GearInsight.Models
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+
+namespace GearInsight.Models
 {
-    public static class TheCharacter
+    public class TheCharacter
     {
-        //Lägg tillbaka i mongo
-        public static Character UltimateCharacter { get; set; } = new Character();
+        //Lägg tillbaka i mongo        
+        public Character UltimateCharacter { get; set; }
     }
 }

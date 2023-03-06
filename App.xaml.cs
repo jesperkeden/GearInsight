@@ -1,10 +1,16 @@
-﻿namespace GearInsight;
+﻿using GearInsight.Models;
+
+namespace GearInsight;
 
 public partial class App : Application
 {
-    public App()
+    public static Character UltimateCharacter { get; set; }
+
+    public App(Character _ultimateCharacter)
     {
-        InitializeComponent();
+        InitializeComponent();        
+
+        UltimateCharacter = _ultimateCharacter;
 
         MainPage = new AppShell();
 

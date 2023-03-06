@@ -22,19 +22,19 @@ namespace GearInsight.Models
             //RequestResult<CharacterMythicKeystoneSeasonDetails> mythic = await warcraftClient.GetCharacterMythicKeystoneSeasonDetailsAsync(realm, character, 1, "profile-eu");
 
 
-            TheCharacter.UltimateCharacter.CharacterName = Helpers.FirstLetterCapital(character);
-            TheCharacter.UltimateCharacter.Realm = Helpers.FirstLetterCapital(realm);
+            App.UltimateCharacter.CharacterName = Helpers.FirstLetterCapital(character);
+            App.UltimateCharacter.Realm = Helpers.FirstLetterCapital(realm);
 
             //Activespec behövs för att köra stats
-            TheCharacter.UltimateCharacter.ActiveSpec = profile.Value.ActiveSpec.Name;
+            App.UltimateCharacter.ActiveSpec = profile.Value.ActiveSpec.Name;
 
-            TheCharacter.UltimateCharacter.AchievementPoints = profile.Value.AchievementPoints;
-            TheCharacter.UltimateCharacter.AvgIlvl = profile.Value.AverageItemLevel;
-            TheCharacter.UltimateCharacter.PlayedRace = profile.Value.Race.Name;
-            TheCharacter.UltimateCharacter.Level = profile.Value.Level;
-            TheCharacter.UltimateCharacter.CurrentGuild = profile.Value.Guild.Name;
-            TheCharacter.UltimateCharacter.PlayedClass = profile.Value.CharacterClass.Name;
-            TheCharacter.UltimateCharacter.CharacterImage = charMedia.Value.Assets[3].Value.AbsoluteUri;
+            App.UltimateCharacter.AchievementPoints = profile.Value.AchievementPoints;
+            App.UltimateCharacter.AvgIlvl = profile.Value.AverageItemLevel;
+            App.UltimateCharacter.PlayedRace = profile.Value.Race.Name;
+            App.UltimateCharacter.Level = profile.Value.Level;
+            App.UltimateCharacter.CurrentGuild = profile.Value.Guild.Name;
+            App.UltimateCharacter.PlayedClass = profile.Value.CharacterClass.Name;
+            App.UltimateCharacter.CharacterImage = charMedia.Value.Assets[3].Value.AbsoluteUri;
 
             
         }

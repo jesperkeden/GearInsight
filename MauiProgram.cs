@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Maui;
+using GearInsight.Models;
 using GearInsight.Services;
 using GearInsight.ViewModels;
 using Microsoft.Extensions.Logging;
@@ -20,8 +21,10 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+		builder.Services.AddSingleton<Character>();
+		
 		builder.Services.AddSingleton<Mongo>();
-		builder.Services.AddSingleton<CharacterPageViewModel>();
+		builder.Services.AddTransient<CharacterPageViewModel>();
 		builder.Services.AddSingleton<MainPage>();
 
 

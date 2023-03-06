@@ -21,62 +21,62 @@ namespace GearInsight.Models
 
             if (stats.Success)
             {
-                if (TheCharacter.UltimateCharacter.PlayedClass == "Warrior" || TheCharacter.UltimateCharacter.PlayedClass == "Death Knight" || TheCharacter.UltimateCharacter.ActiveSpec == "Retribution" || TheCharacter.UltimateCharacter.ActiveSpec == "Protection")
+                if (App.UltimateCharacter.PlayedClass == "Warrior" || App.UltimateCharacter.PlayedClass == "Death Knight" || App.UltimateCharacter.ActiveSpec == "Retribution" || App.UltimateCharacter.ActiveSpec == "Protection")
                 {
-                    TheCharacter.UltimateCharacter.Strength.Rating = stats.Value.Strength.Effective;
+                    App.UltimateCharacter.Strength.Rating = stats.Value.Strength.Effective;
 
-                    TheCharacter.UltimateCharacter.BackgroundImage = "bg_1.png";
+                    App.UltimateCharacter.BackgroundImage = "bg_1.png";
 
-                    TheCharacter.UltimateCharacter.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
-                    TheCharacter.UltimateCharacter.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
+                    App.UltimateCharacter.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
+                    App.UltimateCharacter.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
 
-                    TheCharacter.UltimateCharacter.MeleeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeHaste.ToString());
-                    TheCharacter.UltimateCharacter.MeleeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeHaste.ToString());
+                    App.UltimateCharacter.MeleeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeHaste.ToString());
+                    App.UltimateCharacter.MeleeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeHaste.ToString());
                 }
-                else if (TheCharacter.UltimateCharacter.PlayedClass == "Rogue" || TheCharacter.UltimateCharacter.PlayedClass == "Demon Hunter" || (TheCharacter.UltimateCharacter.PlayedClass == "Hunter" && TheCharacter.UltimateCharacter.ActiveSpec == "Survival") || TheCharacter.UltimateCharacter.ActiveSpec == "Windwalker" || TheCharacter.UltimateCharacter.ActiveSpec == "Brewmaster" || TheCharacter.UltimateCharacter.ActiveSpec == "Enhancement" || TheCharacter.UltimateCharacter.ActiveSpec == "Feral" || TheCharacter.UltimateCharacter.ActiveSpec == "Guardian")
+                else if (App.UltimateCharacter.PlayedClass == "Rogue" || App.UltimateCharacter.PlayedClass == "Demon Hunter" || (App.UltimateCharacter.PlayedClass == "Hunter" && App.UltimateCharacter.ActiveSpec == "Survival") || App.UltimateCharacter.ActiveSpec == "Windwalker" || App.UltimateCharacter.ActiveSpec == "Brewmaster" || App.UltimateCharacter.ActiveSpec == "Enhancement" || App.UltimateCharacter.ActiveSpec == "Feral" || App.UltimateCharacter.ActiveSpec == "Guardian")
                 {
-                    TheCharacter.UltimateCharacter.Agility.Rating = stats.Value.Agility.Effective;
+                    App.UltimateCharacter.Agility.Rating = stats.Value.Agility.Effective;
 
-                    TheCharacter.UltimateCharacter.BackgroundImage = "bg_2.png";
+                    App.UltimateCharacter.BackgroundImage = "bg_2.png";
 
-                    TheCharacter.UltimateCharacter.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
-                    TheCharacter.UltimateCharacter.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
+                    App.UltimateCharacter.MeleeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeCrit.ToString());
+                    App.UltimateCharacter.MeleeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeCrit.ToString());
 
-                    TheCharacter.UltimateCharacter.MeleeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeHaste.ToString());
-                    TheCharacter.UltimateCharacter.MeleeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeHaste.ToString());
+                    App.UltimateCharacter.MeleeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.MeleeHaste.ToString());
+                    App.UltimateCharacter.MeleeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.MeleeHaste.ToString());
                 }
-                else if (TheCharacter.UltimateCharacter.PlayedClass == "Hunter")
+                else if (App.UltimateCharacter.PlayedClass == "Hunter")
                 {
-                    TheCharacter.UltimateCharacter.Agility.Rating = stats.Value.Agility.Effective;
+                    App.UltimateCharacter.Agility.Rating = stats.Value.Agility.Effective;
 
-                    TheCharacter.UltimateCharacter.BackgroundImage = "bg_3.png";
+                    App.UltimateCharacter.BackgroundImage = "bg_3.png";
 
-                    TheCharacter.UltimateCharacter.RangeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.RangedHaste.ToString());
-                    TheCharacter.UltimateCharacter.RangeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.RangedHaste.ToString());
+                    App.UltimateCharacter.RangeHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.RangedHaste.ToString());
+                    App.UltimateCharacter.RangeHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.RangedHaste.ToString());
 
-                    TheCharacter.UltimateCharacter.RangeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.RangedCrit.ToString());
-                    TheCharacter.UltimateCharacter.RangeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.RangedCrit.ToString());
-
-                }
-                else if (TheCharacter.UltimateCharacter.PlayedClass == "Mage" || TheCharacter.UltimateCharacter.PlayedClass == "Warlock" || TheCharacter.UltimateCharacter.PlayedClass == "Priest" || TheCharacter.UltimateCharacter.PlayedClass == "Evoker" || TheCharacter.UltimateCharacter.ActiveSpec == "Mistweaver" || TheCharacter.UltimateCharacter.PlayedClass == "Shaman" || TheCharacter.UltimateCharacter.ActiveSpec == "Balance" || TheCharacter.UltimateCharacter.ActiveSpec == "Restoration" || TheCharacter.UltimateCharacter.ActiveSpec == "Holy")
-                {
-                    TheCharacter.UltimateCharacter.Intellect.Rating = stats.Value.Intellect.Effective;
-
-                    TheCharacter.UltimateCharacter.BackgroundImage = "bg_3.png";
-
-                    TheCharacter.UltimateCharacter.SpellHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.SpellHaste.ToString());
-                    TheCharacter.UltimateCharacter.SpellHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.SpellHaste.ToString());
-
-                    TheCharacter.UltimateCharacter.SpellCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.SpellCrit.ToString());
-                    TheCharacter.UltimateCharacter.SpellCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.SpellCrit.ToString());
+                    App.UltimateCharacter.RangeCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.RangedCrit.ToString());
+                    App.UltimateCharacter.RangeCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.RangedCrit.ToString());
 
                 }
+                else if (App.UltimateCharacter.PlayedClass == "Mage" || App.UltimateCharacter.PlayedClass == "Warlock" || App.UltimateCharacter.PlayedClass == "Priest" || App.UltimateCharacter.PlayedClass == "Evoker" || App.UltimateCharacter.ActiveSpec == "Mistweaver" || App.UltimateCharacter.PlayedClass == "Shaman" || App.UltimateCharacter.ActiveSpec == "Balance" || App.UltimateCharacter.PlayedClass == "Restoration" || App.UltimateCharacter.PlayedClass == "Holy")
+                {
+                    App.UltimateCharacter.Intellect.Rating = stats.Value.Intellect.Effective;
 
-                TheCharacter.UltimateCharacter.Mastery.Rating = Helpers.ExtractRatingFromStats(stats.Value.Mastery.ToString());
-                TheCharacter.UltimateCharacter.Mastery.Percent = Helpers.ExtractPercentFromStats(stats.Value.Mastery.ToString());
-                TheCharacter.UltimateCharacter.Versatility = stats.Value.Versatility.ToString();
-                TheCharacter.UltimateCharacter.Health = stats.Value.Health.ToString();
-                TheCharacter.UltimateCharacter.Power.Rating = stats.Value.Power;
+                    App.UltimateCharacter.BackgroundImage = "bg_3.png";
+
+                    App.UltimateCharacter.SpellHaste.Rating = Helpers.ExtractRatingFromStats(stats.Value.SpellHaste.ToString());
+                    App.UltimateCharacter.SpellHaste.Percent = Helpers.ExtractPercentFromStats(stats.Value.SpellHaste.ToString());
+
+                    App.UltimateCharacter.SpellCrit.Rating = Helpers.ExtractRatingFromStats(stats.Value.SpellCrit.ToString());
+                    App.UltimateCharacter.SpellCrit.Percent = Helpers.ExtractPercentFromStats(stats.Value.SpellCrit.ToString());
+
+                }
+
+                App.UltimateCharacter.Mastery.Rating = Helpers.ExtractRatingFromStats(stats.Value.Mastery.ToString());
+                App.UltimateCharacter.Mastery.Percent = Helpers.ExtractPercentFromStats(stats.Value.Mastery.ToString());
+                App.UltimateCharacter.Versatility = stats.Value.Versatility.ToString();
+                App.UltimateCharacter.Health = stats.Value.Health.ToString();
+                App.UltimateCharacter.Power.Rating = stats.Value.Power;
             }
 
         }

@@ -13,9 +13,8 @@ public partial class CharacterPage : ContentPage
         BindingContext = viewModel;
     }
 
-    protected override void OnAppearing()
+    private async void GoBackToMainPage_Clicked(object sender, EventArgs e)
     {
-        base.OnAppearing();
-        CharacterName.Text = TheCharacter.UltimateCharacter.CharacterName;
+        await Navigation.PopAsync();
     }
 }

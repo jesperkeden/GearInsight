@@ -46,11 +46,11 @@ namespace GearInsight.Services
             var checkIfCharacterExist = CheckIfCharacterExist(name, realm, fetchCharacterList);
 
 
-            TheCharacter.UltimateCharacter = new Character();
+            App.UltimateCharacter = new Character();
             if (await checkIfCharacterExist != Guid.Empty)
             {
                 var filter = Builders<Character>.Filter.Eq(x => x.Id, await CheckIfCharacterExist(name, realm, fetchCharacterList));
-                TheCharacter.UltimateCharacter = await fetchCharacterList.Find(filter).FirstOrDefaultAsync();
+                App.UltimateCharacter = await fetchCharacterList.Find(filter).FirstOrDefaultAsync();
             }
             else
             {
@@ -62,7 +62,7 @@ namespace GearInsight.Services
                 await stats;
                 await items;
 
-                await fetchCharacterList.InsertOneAsync(TheCharacter.UltimateCharacter);
+                await fetchCharacterList.InsertOneAsync(App.UltimateCharacter);
             }
         }
 
@@ -86,7 +86,7 @@ namespace GearInsight.Services
         {
             Task createAfterDelete = CreateCharacter(name, realm);
             await createAfterDelete;
-            await allCharacters.InsertOneAsync(TheCharacter.UltimateCharacter);
+            await allCharacters.InsertOneAsync(App.UltimateCharacter);
 
         }
     }
