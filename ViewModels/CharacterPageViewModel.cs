@@ -83,7 +83,7 @@ namespace GearInsight.ViewModels
         public async Task SetItems()
         {
             HeadName = Helpers.CheckItemIsNull(App.UltimateCharacter.Head);
-            HeadBorderColor = SetTextColor.SetColor(App.UltimateCharacter.Head.Quality);            
+            HeadColor = SetTextColor.SetColor(App.UltimateCharacter.Head.Quality);            
         }
     }
 }
