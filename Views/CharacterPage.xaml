@@ -547,7 +547,7 @@
                     <Label x:Name="CritStat" Text="{Binding SpellCrit.Percent, Source={Static local:App.UltimateCharacter}}"
                            TextColor="AliceBlue"></Label>
 
-                    <Label Grid.Row="1" Text="Crit"></Label>
+                    <Label Grid.Row="1" TextColor="White" Text="Crit"></Label>
                 </Grid>
 
 

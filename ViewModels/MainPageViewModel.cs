@@ -31,6 +31,7 @@ namespace GearInsight.ViewModels
             var characterExist = CharacterProfile.CheckIfCharacterExist(CharacterName, Realm);
             if (await characterExist == true)
             {
+                Error = "";
                 Task GC = Mongo.CreateCharacter(CharacterName, Realm);
                 await GC;
                 //var page = new CharacterPage();

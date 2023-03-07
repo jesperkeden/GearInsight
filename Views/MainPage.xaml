@@ -49,9 +49,7 @@
 
         <Label x:Name="ErrorMsg" AbsoluteLayout.LayoutBounds="670, 600" FontSize="24" Text="{Binding Error}" TextColor="Black"></Label>
 
-        <Image Source="logo_horde.png" AbsoluteLayout.LayoutBounds="730, 250"
-               WidthRequest="200"
-               HeightRequest="200"></Image>
+
 
         <Frame AbsoluteLayout.LayoutBounds="1250, 110"
                WidthRequest="400"
@@ -64,13 +62,10 @@
 
                 <Label HorizontalOptions="Center" FontSize="24" FontAttributes="Bold" TextColor="White" Text="Welcome!">
                 </Label>
-                <Label FontSize="18" TextColor="White" Text="This is GearInsight, your quick and easy search engine to look up character like its 2009.&#x0d;&#x0a;asd" ></Label>
-                <Label FontSize="18" TextColor="White" Text="" ></Label>
-                <Label FontSize="18" TextColor="White" Text="Developed by Andreas Tollmar and Jesper Kedén for our Architecutbla course in 2023." ></Label>
-                <Label FontSize="18" TextColor="White" Text="" ></Label>
-                <Label FontSize="18" TextColor="White" Text="" ></Label>
-                <Label FontSize="18" TextColor="White" Text="Here are some sample characters for you to use unless you have one of your own." ></Label>
-                <Label FontSize="18" TextColor="White" Text="" ></Label>
+                <Label FontSize="18" TextColor="White" Text="This is GearInsight, your quick and easy search engine to look up character like its 2009.&#x0d;&#x0a;In this current version, you can only search for characters on european realms.&#x0d;&#x0a;&#x0d;&#x0a;" ></Label>
+                <Label FontSize="18" TextColor="White" Text="Here are some sample characters for you to use unless you have one of your own.&#x0d;&#x0a;" ></Label>
+                <Label FontSize="18" TextColor="White" Text="Lockerinos - Stormscale&#x0d;&#x0a;Rpgodx - Stormscale&#x0d;&#x0a;Gingimage - Tarren Mill&#x0d;&#x0a;Yetï - Ravencrest&#x0d;&#x0a;Ramfam - Kazzak&#x0d;&#x0a;Dunndheal - Stormscale&#x0d;&#x0a;Barajoel - Stormscale&#x0d;&#x0a;;&#x0d;&#x0a;" ></Label>
+                <Label FontSize="18" TextColor="White" Text="Developed by Andreas Tollmar and Jesper Kedén for our architectural course @ Campus Nyköping, class of 2024." ></Label>
                 <Label FontSize="18" TextColor="White" Text="" ></Label>
 
                 
@@ -104,7 +99,9 @@
                 Command="{Binding GetCharacterCommand}"
                 ></Button>
 
+        <Image Source="logo_gi.png" AbsoluteLayout.LayoutBounds="736, 298, 200, 200"
 
+               ></Image>
 
     </AbsoluteLayout>
 

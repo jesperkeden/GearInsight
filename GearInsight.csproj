@@ -49,6 +49,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\logo_gearinsight.svg" />
+	  <None Remove="Resources\Images\logo_gearinsight2.svg" />
+	  <None Remove="Resources\Images\logo_gi.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="ArgentPonyWarcraftClient" Version="7.0.38" />
 		<PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
 		<PackageReference Include="CommunityToolkit.Maui.MediaElement" Version="1.0.2" />
