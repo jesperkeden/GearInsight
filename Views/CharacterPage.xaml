@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:model="clr-namespace:GearInsight.Models"
              xmlns:local="clr-namespace:GearInsight"
+             xmlns:viewmodel="clr-namespace:GearInsight.ViewModels"
              x:Class="GearInsight.Views.CharacterPage"
              BackgroundImageSource="{Binding BackgroundImage, Source={Static local:App.UltimateCharacter}}" 
              Shell.NavBarIsVisible="False"
@@ -24,7 +25,7 @@
 
             <Button AbsoluteLayout.LayoutBounds="20, 20, 100, 50" Text="Go back" x:Name="GoBackToMainPage" Clicked="GoBackToMainPage_Clicked"></Button>
             <!--Ny knapp-->
-            <!--<Button Grid.Row="5" Grid.Column="4" HeightRequest="50" Text="Refresh" x:Name="RefreshCharacterPage" Clicked="RefreshCharacterPage_Clicked"></Button>-->
+        <Button AbsoluteLayout.LayoutBounds="20, 70, 100, 50" Text="Refresh" x:Name="RefreshCharacterPage" Clicked="RefreshCharacterPage_Clicked"></Button>
 
        
 

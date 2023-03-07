@@ -1,4 +1,5 @@
 using GearInsight.Models;
+using GearInsight.Services;
 using GearInsight.ViewModels;
 
 namespace GearInsight.Views;
@@ -138,4 +139,10 @@ public partial class CharacterPage : ContentPage
 
     }
 
+    private async void RefreshCharacterPage_Clicked(object sender, EventArgs e)
+    {
+        Task refresh = Mongo.RefreshData(App.UltimateCharacter.CharacterName.ToLower(), App.UltimateCharacter.Realm.ToLower());
+        await refresh;
+        await Navigation.PopAsync();
+    }
 }

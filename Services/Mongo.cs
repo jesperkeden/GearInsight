@@ -42,11 +42,6 @@ namespace GearInsight.Services
 
         public static async Task CreateCharacter(string name, string realm)
         {
-            if (true)
-            {
-
-            }
-            
             
             IMongoCollection<Character> fetchCharacterList = await FetchDatabase();
             var checkIfCharacterExist = CheckIfCharacterExist(name, realm, fetchCharacterList);
@@ -83,16 +78,15 @@ namespace GearInsight.Services
             await createdCharacter;
         }
 
-        public static async Task DeleteOneCharacter(IMongoCollection<Character> myCollection, Guid id)
+        private static async Task DeleteOneCharacter(IMongoCollection<Character> myCollection, Guid id)
         {
             var character = await myCollection.DeleteOneAsync(x => x.Id == id);
         }
 
-        public static async Task CreateAfterDelete(string name, string realm, IMongoCollection<Character> allCharacters)
+        private static async Task CreateAfterDelete(string name, string realm, IMongoCollection<Character> allCharacters)
         {
             Task createAfterDelete = CreateCharacter(name, realm);
-            await createAfterDelete;
-            await allCharacters.InsertOneAsync(App.UltimateCharacter);
+            await createAfterDelete;            
 
         }
     }
