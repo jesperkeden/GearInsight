@@ -561,7 +561,7 @@
                     <Label x:Name="PowerStat" Text="{Binding Power.Rating, Source={Static local:App.UltimateCharacter}}"
                            TextColor="AliceBlue"></Label>
 
-                    <Label x:Name="PowerLable"  Grid.Row="1" Text="Mana"></Label>
+                    <Label x:Name="PowerLabel"  Grid.Row="1" Text="Mana"></Label>
                 </Grid>
 
 

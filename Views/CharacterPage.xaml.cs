@@ -35,7 +35,7 @@ public partial class CharacterPage : ContentPage
             if (App.UltimateCharacter.PlayedClass == "Warrior")
             {
                 PowerImg.Source = "rage.png";
-                PowerLable.Text = "Rage";
+                PowerLabel.Text = "Rage";
                 if (App.UltimateCharacter.ActiveSpec == "Protection")
                 {
                     RoleImg.Source = "role_tank.png";
@@ -44,7 +44,7 @@ public partial class CharacterPage : ContentPage
             else if (App.UltimateCharacter.PlayedClass == "Death Knight")
             {
                 PowerImg.Source = "runicpower.png";
-                PowerLable.Text = "Runic Power";
+                PowerLabel.Text = "Runic Power";
                 if (App.UltimateCharacter.ActiveSpec == "Blood")
                 {
                     RoleImg.Source = "role_tank.png";
@@ -53,7 +53,7 @@ public partial class CharacterPage : ContentPage
             else
             {
                 PowerImg.Source = "mana.png";
-                PowerLable.Text = "Mana";
+                PowerLabel.Text = "Mana";
             }
             
         }
@@ -70,7 +70,7 @@ public partial class CharacterPage : ContentPage
             if (App.UltimateCharacter.PlayedClass == "Rogue" || App.UltimateCharacter.ActiveSpec == "Windwalker" || App.UltimateCharacter.ActiveSpec == "Brewmaster" || App.UltimateCharacter.ActiveSpec == "Feral")
             {
                 PowerImg.Source = "energy.png";
-                PowerLable.Text = "Energy";
+                PowerLabel.Text = "Energy";
                 if (App.UltimateCharacter.ActiveSpec == "Brewmaster")
                 {
                     RoleImg.Source = "role_tank.png";
@@ -79,23 +79,23 @@ public partial class CharacterPage : ContentPage
             else if (App.UltimateCharacter.PlayedClass == "Demon Hunter")
             {
                 PowerImg.Source = "fury.png";
-                PowerLable.Text = "Fury";
+                PowerLabel.Text = "Fury";
                 if (App.UltimateCharacter.ActiveSpec == "Vengeance")
                 {
                     RoleImg.Source = "role_tank.png";
-                    PowerLable.Text = "Pain";
+                    PowerLabel.Text = "Pain";
                 }
             }
             else if (App.UltimateCharacter.ActiveSpec == "Survival")
             {
                 PowerImg.Source = "focus.png";
-                PowerLable.Text = "Focus";
+                PowerLabel.Text = "Focus";
 
             }
             else if (App.UltimateCharacter.ActiveSpec == "Enhancement" || App.UltimateCharacter.ActiveSpec == "Guardian")
             {
                 PowerImg.Source = "mana.png";
-                PowerLable.Text = "Mana";
+                PowerLabel.Text = "Mana";
                 if (App.UltimateCharacter.ActiveSpec == "Guardian")
                 {
                     RoleImg.Source = "role_tank.png";
@@ -112,7 +112,7 @@ public partial class CharacterPage : ContentPage
             BaseLabel.Text = "Agility";
             BaseStatImg.Source = "agility.png";
             PowerImg.Source = "focus.png";
-            PowerLable.Text = "Focus";
+            PowerLabel.Text = "Focus";
             RoleImg.Source = "role_dmg.png";
         }
         else
@@ -125,7 +125,7 @@ public partial class CharacterPage : ContentPage
             BaseLabel.Text = "Intellect";
             BaseStatImg.Source = "intellect.png";
             PowerImg.Source = "mana.png";
-            PowerLable.Text = "Mana";
+            PowerLabel.Text = "Mana";
             RoleImg.Source = "role_dmg.png";
 
             if (App.UltimateCharacter.ActiveSpec == "Holy" || App.UltimateCharacter.ActiveSpec == "Restoration" || App.UltimateCharacter.ActiveSpec == "Discipline" || App.UltimateCharacter.ActiveSpec == "Preservation" || App.UltimateCharacter.ActiveSpec == "Mistweaver")
