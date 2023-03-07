@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GearInsight.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -88,5 +89,16 @@ namespace GearInsight.Services
                 return null;
             }
         }
+
+        public static string CheckItemIsNull(OurItem item)
+        {
+            string itemName = "";
+            if (item.ILevel != null)
+            {
+                itemName = item.ItemName;
+            }
+            return itemName;
+        }
+
     }
 }

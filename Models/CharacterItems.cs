@@ -30,7 +30,8 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Head.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Head.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Head.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
-
+                        App.UltimateCharacter.Head.Quality = a.EquippedItems[i].Quality.Name;
+                        
                         RequestResult<ItemMedia> headMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Head.WowheadId, "static-eu");
                         ItemMedia headIcon = headMedia.Value;
 
@@ -46,6 +47,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Neck.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Neck.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Neck.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Neck.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> neckMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Neck.WowheadId, "static-eu");
                         ItemMedia neckIcon = neckMedia.Value;
@@ -60,6 +62,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Shoulder.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Shoulder.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Shoulder.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Shoulder.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> shouldersMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Shoulder.WowheadId, "static-eu");
                         ItemMedia shouldersIcon = shouldersMedia.Value;
@@ -75,6 +78,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Shirt.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Shirt.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Shirt.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Shirt.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> shirtMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Shirt.WowheadId, "static-eu");
                         ItemMedia shirtIcon = shirtMedia.Value;
@@ -89,6 +93,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Chest.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Chest.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Chest.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Chest.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> chestMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Chest.WowheadId, "static-eu");
                         ItemMedia chestIcon = chestMedia.Value;
@@ -104,6 +109,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Waist.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Waist.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Waist.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Waist.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> waistMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Waist.WowheadId, "static-eu");
                         ItemMedia waistIcon = waistMedia.Value;
@@ -119,6 +125,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Legs.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Legs.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Legs.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Legs.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> legsMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Legs.WowheadId, "static-eu");
                         ItemMedia legsIcon = legsMedia.Value;
@@ -134,6 +141,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Feet.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Feet.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Feet.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Feet.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> feetMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Feet.WowheadId, "static-eu");
                         ItemMedia feetIcon = feetMedia.Value;
@@ -148,6 +156,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Wrist.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Wrist.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Wrist.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Wrist.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> wristMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Wrist.WowheadId, "static-eu");
                         ItemMedia wristIcon = wristMedia.Value;
@@ -162,6 +171,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Hands.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Hands.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Hands.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Hands.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> handsMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Hands.WowheadId, "static-eu");
                         ItemMedia handsIcon = handsMedia.Value;
@@ -176,6 +186,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Ring1.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Ring1.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Ring1.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Ring1.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> ring1Media = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Ring1.WowheadId, "static-eu");
                         ItemMedia ring1Icon = ring1Media.Value;
@@ -190,6 +201,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Ring2.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Ring2.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Ring2.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Ring2.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> ring2Media = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Ring2.WowheadId, "static-eu");
                         ItemMedia ring2Icon = ring2Media.Value;
@@ -204,6 +216,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Trinket1.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Trinket1.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Trinket1.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Trinket1.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> trinket1Media = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Trinket1.WowheadId, "static-eu");
                         ItemMedia trinket1Icon = trinket1Media.Value;
@@ -218,6 +231,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Trinket2.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Trinket2.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Trinket2.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Trinket2.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> trinket2Media = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Trinket2.WowheadId, "static-eu");
                         ItemMedia trinket2Icon = trinket2Media.Value;
@@ -232,6 +246,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Back.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Back.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Back.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Back.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> backMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Back.WowheadId, "static-eu");
                         ItemMedia backIcon = backMedia.Value;
@@ -246,6 +261,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Mainhand.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Mainhand.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Mainhand.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Mainhand.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> mainhandMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Mainhand.WowheadId, "static-eu");
                         ItemMedia mainhandIcon = mainhandMedia.Value;
@@ -260,6 +276,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Offhand.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Offhand.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Offhand.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Offhand.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> offhandMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Offhand.WowheadId, "static-eu");
                         ItemMedia offhandIcon = offhandMedia.Value;
@@ -274,6 +291,7 @@ namespace GearInsight.Models
                         App.UltimateCharacter.Tabard.WowheadId = a.EquippedItems[i].Media.Id;
                         App.UltimateCharacter.Tabard.ItemName = a.EquippedItems[i].Name;
                         App.UltimateCharacter.Tabard.ILevel = Helpers.ExtractValue(a.EquippedItems[i].Level.ToString());
+                        App.UltimateCharacter.Tabard.Quality = a.EquippedItems[i].Quality.Name;
 
                         RequestResult<ItemMedia> tabardMedia = await warcraftClient.GetItemMediaAsync(App.UltimateCharacter.Tabard.WowheadId, "static-eu");
                         ItemMedia tabardIcon = tabardMedia.Value;

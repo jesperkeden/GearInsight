@@ -22,11 +22,11 @@ namespace GearInsight.Models
         public string PlayedRace { get; set; }
         public int Level { get; set; }
         public string PlayedClass { get; set; }
-        public string ActiveSpec { get; set; }
-        public string CurrentGuild { get; set; }
+        public string? ActiveSpec { get; set; }
+        public string? CurrentGuild { get; set; }
         public int AvgIlvl { get; set; }
         public int AchievementPoints { get; set; }
-        public string MPlusRating { get; set; }
+        public string? MPlusRating { get; set; }
         public string BackgroundImage { get; set; }
         public string CharacterImage { get; set; }
         public Head Head { get; set; } = new Head();

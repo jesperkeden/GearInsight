@@ -32,7 +32,11 @@ namespace GearInsight.Models
             App.UltimateCharacter.AvgIlvl = profile.Value.AverageItemLevel;
             App.UltimateCharacter.PlayedRace = profile.Value.Race.Name;
             App.UltimateCharacter.Level = profile.Value.Level;
-            App.UltimateCharacter.CurrentGuild = profile.Value.Guild.Name;
+            if (profile.Value.Guild != null)
+            {
+                App.UltimateCharacter.CurrentGuild = profile.Value.Guild.Name;
+
+            }
             App.UltimateCharacter.PlayedClass = profile.Value.CharacterClass.Name;
             App.UltimateCharacter.CharacterImage = charMedia.Value.Assets[3].Value.AbsoluteUri;
 

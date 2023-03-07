@@ -13,6 +13,7 @@ namespace GearInsight.Models
         public int WowheadId { get; set; }
         public string Enchantment { get; set; }
         public string ILevel { get; set; }
+        public string Quality { get; set; }
     }
     public class Head : OurItem
     {
