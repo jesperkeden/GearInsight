@@ -86,6 +86,8 @@ namespace GearInsight.ViewModels
 
         public async Task SetItems()
         {
+            // Ändra på lables och färger från viewmodel för att "få undan" lite kod
+
             HeadName = Helpers.CheckItemIsNull(App.UltimateCharacter.Head);
             HeadColor = SetTextColor.SetColor(App.UltimateCharacter.Head.Quality);
             NeckName = Helpers.CheckItemIsNull(App.UltimateCharacter.Neck);
@@ -122,6 +124,8 @@ namespace GearInsight.ViewModels
             MainhandColor = SetTextColor.SetColor(App.UltimateCharacter.Mainhand.Quality);
             OffhandName = Helpers.CheckItemIsNull(App.UltimateCharacter.Offhand);
             OffhandColor = SetTextColor.SetColor(App.UltimateCharacter.Offhand.Quality);
+
+            // Gick inte att komma åt tooltipproperty i varken grid eller label så även det görs här - binding till texten
 
             if (App.UltimateCharacter.PlayedClass == "Warrior" || App.UltimateCharacter.PlayedClass == "Death Knight" || 
                 App.UltimateCharacter.ActiveSpec == "Retribution" || App.UltimateCharacter.ActiveSpec == "Protection" || 

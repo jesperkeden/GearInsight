@@ -22,8 +22,11 @@ public partial class CharacterPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        Task test = viewModel.SetItems();
-        await test;
+        Task setAppereance = viewModel.SetItems();
+        await setAppereance;
+
+        // Ändrar vissa bilder och färger beroende på vilken klass man spelar
+
         if (App.UltimateCharacter.PlayedClass == "Warrior" || App.UltimateCharacter.PlayedClass == "Death Knight" || App.UltimateCharacter.ActiveSpec == "Retribution" || App.UltimateCharacter.ActiveSpec == "Protection" )
         {
             VersStat.Text = App.UltimateCharacter.VersatilityPercent + "%";
@@ -136,52 +139,7 @@ public partial class CharacterPage : ContentPage
             }
 
         }
-        //HeadLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Head.Quality);
-        //HeadFrame.BorderColor = HeadLabel.TextColor;
-        //NeckLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Neck.Quality);
-        //NeckFrame.BorderColor = NeckLabel.TextColor;
-        //ShoulderLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Shoulder.Quality);
-        //ShoulderFrame.BorderColor = ShoulderLabel.TextColor;
-        //ChestLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Chest.Quality);
-        //ChestFrame.BorderColor = ChestLabel.TextColor;
-        //BackLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Back.Quality);
-        //BackFrame.BorderColor = BackLabel.TextColor;
-        //TabardLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Tabard.Quality);
-        //TabardFrame.BorderColor = TabardLabel.TextColor;
-        //ShirtLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Shirt.Quality);
-        //ShirtFrame.BorderColor = ShirtLabel.TextColor;
-        //WristLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Wrist.Quality);
-        //WristFrame.BorderColor = WristLabel.TextColor;
-        //HandsLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Hands.Quality);
-        //HandsFrame.BorderColor = HandsLabel.TextColor;
-        //WaistLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Waist.Quality);
-        //WaistFrame.BorderColor = WaistLabel.TextColor;
-        //LegsLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Legs.Quality);
-        //LegsFrame.BorderColor = LegsLabel.TextColor;
-        //FeetLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Feet.Quality);
-        //FeetFrame.BorderColor = FeetLabel.TextColor;
-        //Ring1Label.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Ring1.Quality);
-        //Ring1Frame.BorderColor = Ring1Label.TextColor;
-        //Ring2Label.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Ring2.Quality);
-        //Ring2Frame.BorderColor = Ring2Label.TextColor;
-        //Trinket1Label.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Trinket1.Quality);
-        //Trinket1Frame.BorderColor = Trinket1Label.TextColor;
-        //Trinket2Label.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Trinket2.Quality);
-        //Trinket2Frame.BorderColor = Trinket2Label.TextColor;
-        //MainhandLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Mainhand.Quality);
-        //MainhandFrame.BorderColor = MainhandLabel.TextColor;
-        //OffhandLabel.TextColor = SetTextColor.SetColor(App.UltimateCharacter.Offhand.Quality);
-        //OffhandFrame.BorderColor = OffhandLabel.TextColor;
-
-        //HeadLabel.Text = Helpers.CheckItemIsNull(App.UltimateCharacter.Head);
-        //HeadLabel.Text = Helpers.CheckItemIsNull(App.UltimateCharacter.Head);
-        //HeadLabel.Text = Helpers.CheckItemIsNull(App.UltimateCharacter.Head);
-        //HeadLabel.Text = Helpers.CheckItemIsNull(App.UltimateCharacter.Head);
-        //HeadLabel.Text = Helpers.CheckItemIsNull(App.UltimateCharacter.Head);
-       
         
-        
-
 
     }
 

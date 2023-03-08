@@ -28,14 +28,15 @@ namespace GearInsight.ViewModels
         [RelayCommand]
         public async Task GetCharacterAsync()
         {
+            // En första "facade"/felhantering för att kolla om det ens finns en karaktär med detta namn på den här servern
             var characterExist = CharacterProfile.CheckIfCharacterExist(CharacterName, Realm);
+
+            // Om hämtningen lyckas går vi vidare, annars får vi error msg
             if (await characterExist == true)
             {
                 Error = "";
                 Task GC = Mongo.CreateCharacter(CharacterName, Realm);
-                await GC;
-                //var page = new CharacterPage();
-                //page.BindingContext = TheCharacter.UltimateCharacter;
+                await GC;               
                 await Shell.Current.GoToAsync(nameof(CharacterPage));
             }
             else
