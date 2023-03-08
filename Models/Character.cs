@@ -26,7 +26,8 @@ namespace GearInsight.Models
         public string? CurrentGuild { get; set; }
         public int AvgIlvl { get; set; }
         public int AchievementPoints { get; set; }
-        public string? MPlusRating { get; set; }
+        public string Faction { get; set; }
+        public DateTimeOffset LastLogin { get; set; }
         public string BackgroundImage { get; set; }
         public string CharacterImage { get; set; }
         public Head Head { get; set; } = new Head();
@@ -50,7 +51,6 @@ namespace GearInsight.Models
         public Stats Intellect { get; set; } = new Stats();
         public Stats Agility { get; set; } = new Stats();
         public Stats Strength { get; set; } = new Stats();
-
         public Stats SpellHaste { get; set; } = new Stats();
         public Stats MeleeHaste { get; set; } = new Stats();
         public Stats RangeHaste { get; set; } = new Stats();

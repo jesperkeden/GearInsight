@@ -25,7 +25,15 @@ public partial class CharacterPage : ContentPage
         Task setAppereance = viewModel.SetItems();
         await setAppereance;
 
+
         // Ändrar vissa bilder och färger beroende på vilken klass man spelar
+
+        if (App.UltimateCharacter.Faction == "Alliance")
+        {
+            FactionImg.Source = "logo_alliance.png";
+        }
+
+        CharacterName.TextColor = SetTextColor.SetClassColor();
 
         if (App.UltimateCharacter.PlayedClass == "Warrior" || App.UltimateCharacter.PlayedClass == "Death Knight" || App.UltimateCharacter.ActiveSpec == "Retribution" || App.UltimateCharacter.ActiveSpec == "Protection" )
         {

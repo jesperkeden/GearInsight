@@ -19,7 +19,6 @@ namespace GearInsight.Models
 
             RequestResult<CharacterProfileSummary> profile = await warcraftClient.GetCharacterProfileSummaryAsync(realm, character, "profile-eu");
             RequestResult<CharacterMediaSummary> charMedia = await warcraftClient.GetCharacterMediaSummaryAsync(realm, character, "profile-eu");
-            //RequestResult<CharacterMythicKeystoneSeasonDetails> mythic = await warcraftClient.GetCharacterMythicKeystoneSeasonDetailsAsync(realm, character, 1, "profile-eu");
 
 
             App.UltimateCharacter.CharacterName = Helpers.FirstLetterCapital(character);
@@ -27,7 +26,8 @@ namespace GearInsight.Models
 
             //Activespec behövs för att köra stats
             App.UltimateCharacter.ActiveSpec = profile.Value.ActiveSpec.Name;
-
+            App.UltimateCharacter.Faction = profile.Value.Faction.Name;
+            App.UltimateCharacter.LastLogin = profile.Value.LastLoginTimestamp;
             App.UltimateCharacter.AchievementPoints = profile.Value.AchievementPoints;
             App.UltimateCharacter.AvgIlvl = profile.Value.AverageItemLevel;
             App.UltimateCharacter.PlayedRace = profile.Value.Race.Name;

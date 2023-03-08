@@ -16,30 +16,133 @@
 
 
 
-    <AbsoluteLayout >
-
-        <Label AbsoluteLayout.LayoutBounds="620, 40" x:Name="CharacterName" Text="{Binding CharacterName, Source={Static local:App.UltimateCharacter}}" TextColor="Purple" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
-
-        <Image AbsoluteLayout.LayoutBounds="970, 110" 
-               Source="role_dmg.png" 
-               x:Name="RoleImg">
-        </Image>
+    <AbsoluteLayout>
         
-        <Label AbsoluteLayout.LayoutBounds="840, 130" 
-               TextColor="White" 
-               Text="{Binding ActiveSpec, Source={Static local:App.UltimateCharacter}}">
-        </Label>
+        <Grid AbsoluteLayout.LayoutBounds="560, 50" 
+            ColumnDefinitions="100, 340, 40" 
+            RowDefinitions="75, 100">
 
-        <Label AbsoluteLayout.LayoutBounds="840, 110" 
-               TextColor="White" 
-               Text="{Binding AvgIlvl, Source={Static local:App.UltimateCharacter}, StringFormat='Avg itemlevel {0}'}">
-        </Label>
-        <Label AbsoluteLayout.LayoutBounds="840, 60"
+            <Label x:Name="CharacterName"
+                   Grid.Column="1"
+                   Grid.Row="0"
+                   Text="{Binding CharacterName, Source={Static local:App.UltimateCharacter}}" 
+                   TextColor="White"
+                   FontSize="48" 
+                   HorizontalOptions="Center"
+                   Padding="10">
+            </Label>
+
+            <Image
+                Grid.Column="2"
+                Grid.Row="0"
+                Source="role_dmg.png"
+                WidthRequest="40"
+                HeightRequest="40"
+                x:Name="RoleImg">
+            </Image>
+
+            <Image
+                Grid.Column="0"
+                Grid.Row="0"
+                Source="logo_horde.png" 
+                WidthRequest="100"
+                HeightRequest="100"
+                x:Name="FactionImg">
+            </Image>
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                RowDefinitions="20,30"
+                ColumnDefinitions="120, 100, 120"
+>
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="{Binding Level, Source={Static local:App.UltimateCharacter}, StringFormat='Lvl {0}'}"
+                    TextColor="White"
+                    FontSize="14"
+                    HorizontalOptions="End">
+                </Label>
+
+                <Label 
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Text="{Binding ActiveSpec, Source={Static local:App.UltimateCharacter}}"
+                    TextColor="White"
+                    FontSize="14"
+                    HorizontalOptions="Center">
+                </Label>
+
+                <Label 
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Text="{Binding PlayedClass, Source={Static local:App.UltimateCharacter}}"
+                    TextColor="White"
+                    FontSize="14"
+                    HorizontalOptions="Start">
+                </Label>
+
+                <Label
+                    Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    Text="{Binding Realm, Source={Static local:App.UltimateCharacter}}"
+                    TextColor="White"
+                    FontSize="14"
+                    HorizontalTextAlignment="Center">
+                </Label>
+            </Grid>
+        </Grid>
+
+
+        <Frame AbsoluteLayout.LayoutBounds="10, 130"
+               WidthRequest="310"
+               HeightRequest="230"
+               BackgroundColor="black"
+               BorderColor="Transparent"
+               Opacity="0.5"
+               HorizontalOptions="Center">
+            <VerticalStackLayout>
+
+                <Label
+               Text="{Binding LastLogin, Source={Static local:App.UltimateCharacter}, StringFormat='Last seen: {0}'}"
+               TextColor="White"
+               FontSize="18">
+                </Label>
+
+                <Label
+               Text="{Binding Faction, Source={Static local:App.UltimateCharacter}, StringFormat='Faction: {0}'}"
+               TextColor="White"
+               FontSize="18">
+                </Label>
+
+                <Label
                Text="{Binding CurrentGuild, Source={Static local:App.UltimateCharacter}, StringFormat='Guild: {0}'}"
                TextColor="White"
-               FontSize="20">
-        </Label>
-        
+               FontSize="18">
+                </Label>
+
+                <Label
+               Text="{Binding PlayedRace, Source={Static local:App.UltimateCharacter}, StringFormat='Race: {0}'}"
+               TextColor="White"
+               FontSize="18">
+                </Label>
+
+                <Label
+               Text="{Binding AvgIlvl, Source={Static local:App.UltimateCharacter}, StringFormat='Avg itemlevel: {0}'}"
+               TextColor="White"
+               FontSize="18">
+                </Label>
+
+                <Label
+               Text="{Binding AchievementPoints, Source={Static local:App.UltimateCharacter}, StringFormat='Achievementpoints: {0}'}"
+               TextColor="White"
+               FontSize="18">
+                </Label>
+            </VerticalStackLayout>
+        </Frame>
+
         <Button AbsoluteLayout.LayoutBounds="20, 20, 100, 50" 
                 Text="Go back" 
                 x:Name="GoBackToMainPage" 
@@ -53,8 +156,9 @@
             
         </Button>
 
-        <Button AbsoluteLayout.LayoutBounds="20, 70, 100, 50" 
-                Text="Refresh" x:Name="RefreshCharacterPage" 
+        <Button AbsoluteLayout.LayoutBounds="112, 360, 100, 50" 
+                Text="Refresh" 
+                x:Name="RefreshCharacterPage" 
                 Clicked="RefreshCharacterPage_Clicked"
                 HeightRequest="20"
                 BackgroundColor="#342f2d"
