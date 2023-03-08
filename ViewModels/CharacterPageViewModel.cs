@@ -122,6 +122,27 @@ namespace GearInsight.ViewModels
             MainhandColor = SetTextColor.SetColor(App.UltimateCharacter.Mainhand.Quality);
             OffhandName = Helpers.CheckItemIsNull(App.UltimateCharacter.Offhand);
             OffhandColor = SetTextColor.SetColor(App.UltimateCharacter.Offhand.Quality);
+
+            if (App.UltimateCharacter.PlayedClass == "Warrior" || App.UltimateCharacter.PlayedClass == "Death Knight" || 
+                App.UltimateCharacter.ActiveSpec == "Retribution" || App.UltimateCharacter.ActiveSpec == "Protection" || 
+                App.UltimateCharacter.PlayedClass == "Rogue" || App.UltimateCharacter.ActiveSpec == "Survival" || 
+                App.UltimateCharacter.PlayedClass == "Demon Hunter" || App.UltimateCharacter.ActiveSpec == "Windwalker" || 
+                App.UltimateCharacter.ActiveSpec == "Brewmaster" || App.UltimateCharacter.ActiveSpec == "Feral" || 
+                App.UltimateCharacter.ActiveSpec == "Enhancement" || App.UltimateCharacter.ActiveSpec == "Guardian")
+            {
+                HasteTooltip = App.UltimateCharacter.MeleeHaste.Rating.ToString() + " Raiting";
+                CritTooltip = App.UltimateCharacter.MeleeCrit.Rating.ToString() + " Raiting";
+            }
+            else if (App.UltimateCharacter.PlayedClass == "Hunter")
+            {
+                HasteTooltip = App.UltimateCharacter.RangeHaste.Rating.ToString() + " Raiting";
+                CritTooltip = App.UltimateCharacter.RangeCrit.Rating.ToString() + " Raiting";
+            }
+            else
+            {
+                HasteTooltip = App.UltimateCharacter.SpellHaste.Rating.ToString() + " Raiting";
+                CritTooltip = App.UltimateCharacter.SpellCrit.Rating.ToString() + " Raiting";
+            }
         }
     }
 }

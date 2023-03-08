@@ -34,6 +34,11 @@
                TextColor="White" 
                Text="{Binding AvgIlvl, Source={Static local:App.UltimateCharacter}, StringFormat='Avg itemlevel {0}'}">
         </Label>
+        <Label AbsoluteLayout.LayoutBounds="840, 60"
+               Text="{Binding CurrentGuild, Source={Static local:App.UltimateCharacter}, StringFormat='Guild: {0}'}"
+               TextColor="White"
+               FontSize="20">
+        </Label>
         
         <Button AbsoluteLayout.LayoutBounds="20, 20, 100, 50" 
                 Text="Go back" 
@@ -933,7 +938,7 @@
                   Grid.Column="2" 
                   ColumnDefinitions="50, 200" 
                   Padding="5"
-                  ToolTipProperties.Text="{Binding Mastery.Rating, Source={Static local:App.UltimateCharacter}}">
+                  ToolTipProperties.Text="{Binding Mastery.Rating, Source={Static local:App.UltimateCharacter}, StringFormat='{0} Raiting'}">
 
                 <Image 
                     Source="mastery.png">
@@ -979,7 +984,7 @@
                   Grid.Column="3" 
                   ColumnDefinitions="50, 200" 
                   Padding="5"
-                  ToolTipProperties.Text="{Binding Versatility, Source={Static local:App.UltimateCharacter}}">
+                  ToolTipProperties.Text="{Binding Versatility, Source={Static local:App.UltimateCharacter}, StringFormat='{0} Raiting'}">
 
                 <Image 
                     Source="versatility.png">
