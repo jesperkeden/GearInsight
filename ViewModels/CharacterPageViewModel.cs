@@ -78,6 +78,10 @@ namespace GearInsight.ViewModels
         string offhandName;
         [ObservableProperty]
         Color offhandColor;
+        [ObservableProperty]
+        string hasteTooltip;
+        [ObservableProperty]
+        string critTooltip;
         
 
         public async Task SetItems()
