@@ -83,7 +83,41 @@ namespace GearInsight.ViewModels
         public async Task SetItems()
         {
             HeadName = Helpers.CheckItemIsNull(App.UltimateCharacter.Head);
-            HeadColor = SetTextColor.SetColor(App.UltimateCharacter.Head.Quality);            
+            HeadColor = SetTextColor.SetColor(App.UltimateCharacter.Head.Quality);
+            NeckName = Helpers.CheckItemIsNull(App.UltimateCharacter.Neck);
+            NeckColor = SetTextColor.SetColor(App.UltimateCharacter.Neck.Quality);
+            ShoulderName = Helpers.CheckItemIsNull(App.UltimateCharacter.Shoulder);
+            ShoulderColor = SetTextColor.SetColor(App.UltimateCharacter.Shoulder.Quality);
+            ChestName = Helpers.CheckItemIsNull(App.UltimateCharacter.Chest);
+            ChestColor = SetTextColor.SetColor(App.UltimateCharacter.Chest.Quality);
+            BackName = Helpers.CheckItemIsNull(App.UltimateCharacter.Back);
+            BackColor = SetTextColor.SetColor(App.UltimateCharacter.Back.Quality);
+            ShirtName = Helpers.CheckItemIsNull(App.UltimateCharacter.Shirt);
+            ShirtColor = SetTextColor.SetColor(App.UltimateCharacter.Shirt.Quality);
+            TabardName = Helpers.CheckItemIsNull(App.UltimateCharacter.Tabard);
+            TabardColor = SetTextColor.SetColor(App.UltimateCharacter.Tabard.Quality);
+            WristName = Helpers.CheckItemIsNull(App.UltimateCharacter.Wrist);
+            WristColor = SetTextColor.SetColor(App.UltimateCharacter.Wrist.Quality);
+            HandsName = Helpers.CheckItemIsNull(App.UltimateCharacter.Hands);
+            HandsColor = SetTextColor.SetColor(App.UltimateCharacter.Hands.Quality);
+            WaistName = Helpers.CheckItemIsNull(App.UltimateCharacter.Waist);
+            WaistColor = SetTextColor.SetColor(App.UltimateCharacter.Waist.Quality);
+            LegsName = Helpers.CheckItemIsNull(App.UltimateCharacter.Legs);
+            LegsColor = SetTextColor.SetColor(App.UltimateCharacter.Legs.Quality);
+            FeetName = Helpers.CheckItemIsNull(App.UltimateCharacter.Feet);
+            FeetColor = SetTextColor.SetColor(App.UltimateCharacter.Feet.Quality);
+            Ring1Name = Helpers.CheckItemIsNull(App.UltimateCharacter.Ring1);
+            Ring1Color = SetTextColor.SetColor(App.UltimateCharacter.Ring1.Quality);
+            Ring2Name = Helpers.CheckItemIsNull(App.UltimateCharacter.Ring2);
+            Ring2Color = SetTextColor.SetColor(App.UltimateCharacter.Ring2.Quality);
+            Trinket1Name = Helpers.CheckItemIsNull(App.UltimateCharacter.Trinket1);
+            Trinket1Color = SetTextColor.SetColor(App.UltimateCharacter.Trinket1.Quality);
+            Trinket2Name = Helpers.CheckItemIsNull(App.UltimateCharacter.Trinket2);
+            Trinket2Color = SetTextColor.SetColor(App.UltimateCharacter.Trinket2.Quality);
+            MainhandName = Helpers.CheckItemIsNull(App.UltimateCharacter.Mainhand);
+            MainhandColor = SetTextColor.SetColor(App.UltimateCharacter.Mainhand.Quality);
+            OffhandName = Helpers.CheckItemIsNull(App.UltimateCharacter.Offhand);
+            OffhandColor = SetTextColor.SetColor(App.UltimateCharacter.Offhand.Quality);
         }
     }
 }

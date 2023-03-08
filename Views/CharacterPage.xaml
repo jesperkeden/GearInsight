@@ -20,9 +20,9 @@
 
         <Label AbsoluteLayout.LayoutBounds="620, 40" x:Name="CharacterName" Text="{Binding CharacterName, Source={Static local:App.UltimateCharacter}}" TextColor="Purple" FontSize="48" HorizontalTextAlignment="Center" Padding="10"></Label>
 
-        <Image AbsoluteLayout.LayoutBounds="960, 120" Source="role_dmg.png" x:Name="RoleImg"></Image>
-        <Label AbsoluteLayout.LayoutBounds="840, 130" TextColor="AliceBlue" Text="{Binding ActiveSpec, Source={Static local:App.UltimateCharacter}}"></Label>
-
+        <Image AbsoluteLayout.LayoutBounds="970, 110" Source="role_dmg.png" x:Name="RoleImg"></Image>
+        <Label AbsoluteLayout.LayoutBounds="840, 130" TextColor="White" Text="{Binding ActiveSpec, Source={Static local:App.UltimateCharacter}}"></Label>
+        <Label AbsoluteLayout.LayoutBounds="840, 110" TextColor="White" Text="{Binding AvgIlvl, Source={Static local:App.UltimateCharacter}, StringFormat='Avg itemlevel {0}'}"   ></Label>
         <Button AbsoluteLayout.LayoutBounds="20, 20, 100, 50" 
                 Text="Go back" 
                 x:Name="GoBackToMainPage" 
@@ -462,7 +462,7 @@
                            x:Name="Trinket2Label"
                            Grid.Row="0"
                            FontSize="16"
-                           TextColor="{Binding TrinketColor}"
+                           TextColor="{Binding Trinket2Color}"
                            FontAttributes="Bold"
                            HorizontalOptions="End"></Label>
 
