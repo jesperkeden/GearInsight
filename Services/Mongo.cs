@@ -37,8 +37,10 @@ namespace GearInsight.Services
                     break;
                 }
             }
+
             return guid;
         }
+
         // Bröt ner alla moment och refaktorera till ett tydligt sett enligt vår mening
         public static async Task CreateCharacter(string name, string realm)
         {
@@ -50,7 +52,6 @@ namespace GearInsight.Services
             App.UltimateCharacter = new Character();
             if (await checkIfCharacterExist != Guid.Empty)
             {
-                // Anonym method?
                 var filter = Builders<Character>.Filter.Eq(x => x.Id, await CheckIfCharacterExist(name, realm, fetchCharacterList));
                 App.UltimateCharacter = await fetchCharacterList.Find(filter).FirstOrDefaultAsync();
             }
@@ -89,7 +90,6 @@ namespace GearInsight.Services
         {
             Task createAfterDelete = CreateCharacter(name, realm);
             await createAfterDelete;            
-
         }
     }
 }

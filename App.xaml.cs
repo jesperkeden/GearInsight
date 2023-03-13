@@ -15,8 +15,8 @@ public partial class App : Application
         MainPage = new AppShell();
 
     }
-    protected override Window CreateWindow(IActivationState activationState)
-    {
+    protected override Window CreateWindow(IActivationState activationState) // Sätter en standard size som inte går att ändra, denna storlek är "optimal" för att dem flesta
+    {                                                                       // skärmstorlekar ska fungera.
         var window = base.CreateWindow(activationState);
 
         const int newWidth = 1680;

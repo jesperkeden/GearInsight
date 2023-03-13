@@ -15,10 +15,12 @@ namespace GearInsight.Services
             string pattern = @"\bValue\s*=\s*(\d+)\b";
             Regex regex = new Regex(pattern);
             Match match = regex.Match(input);
+
             if (match.Success)
             {
                 return match.Groups[1].Value;
             }
+
             else
             {
                 return null;
@@ -29,6 +31,7 @@ namespace GearInsight.Services
             var value = name.Substring(0, 1);
             value = value.ToUpper();
             value = value + name.Substring(1, name.Length - 1);
+
             return value;
         }
         public static int ExtractRatingFromStats(string input)
@@ -36,10 +39,12 @@ namespace GearInsight.Services
             string pattern = @"\bRating\s*=\s*(\d+)";
             Regex regex = new Regex(pattern);
             Match match = regex.Match(input);
+
             if (match.Success)
             {
                 return int.Parse(match.Groups[1].Value);
             }
+
             else
             {
                 return 0;
@@ -51,10 +56,12 @@ namespace GearInsight.Services
             string pattern = @"\bValue\s*=\s*(\d+(?:,\d{3})*(?:\.\d+)?)";
             Regex regex = new Regex(pattern);
             Match match = regex.Match(input);
+
             if (match.Success)
             {
                 return double.Parse(match.Groups[1].Value); //.Replace(",", "")
             }
+
             else
             {
                 return null;
@@ -64,10 +71,12 @@ namespace GearInsight.Services
         public static string CheckItemIsNull(OurItem item)
         {
             string itemName = "";
+
             if (item.ILevel != null)
             {
                 itemName = item.ItemName;
             }
+
             return itemName;
         }
 

@@ -37,7 +37,6 @@ namespace GearInsight.Models
 
                         foreach (var headUri in headIcon.Assets)
                         {
-
                             App.UltimateCharacter.Head.Icon = headUri.Value.AbsoluteUri;
                         }
 
@@ -53,7 +52,6 @@ namespace GearInsight.Models
                         ItemMedia neckIcon = neckMedia.Value;
                         foreach (var neckUri in neckIcon.Assets)
                         {
-
                             App.UltimateCharacter.Neck.Icon = neckUri.Value.AbsoluteUri;
                         }
                     }
@@ -68,7 +66,6 @@ namespace GearInsight.Models
                         ItemMedia shouldersIcon = shouldersMedia.Value;
                         foreach (var shouldersUri in shouldersIcon.Assets)
                         {
-
                             App.UltimateCharacter.Shoulder.Icon = shouldersUri.Value.AbsoluteUri;
                         }
                     }
@@ -84,7 +81,6 @@ namespace GearInsight.Models
                         ItemMedia shirtIcon = shirtMedia.Value;
                         foreach (var shirtUri in shirtIcon.Assets)
                         {
-
                             App.UltimateCharacter.Shirt.Icon = shirtUri.Value.AbsoluteUri;
                         }
                     }
@@ -99,7 +95,6 @@ namespace GearInsight.Models
                         ItemMedia chestIcon = chestMedia.Value;
                         foreach (var chestUri in chestIcon.Assets)
                         {
-
                             App.UltimateCharacter.Chest.Icon = chestUri.Value.AbsoluteUri;
                         }
                     }
@@ -115,7 +110,6 @@ namespace GearInsight.Models
                         ItemMedia waistIcon = waistMedia.Value;
                         foreach (var waistUri in waistIcon.Assets)
                         {
-
                             App.UltimateCharacter.Waist.Icon = waistUri.Value.AbsoluteUri;
                         }
                     }
@@ -131,7 +125,6 @@ namespace GearInsight.Models
                         ItemMedia legsIcon = legsMedia.Value;
                         foreach (var legsUri in legsIcon.Assets)
                         {
-
                             App.UltimateCharacter.Legs.Icon = legsUri.Value.AbsoluteUri;
                         }
                     }
@@ -147,7 +140,6 @@ namespace GearInsight.Models
                         ItemMedia feetIcon = feetMedia.Value;
                         foreach (var feetUri in feetIcon.Assets)
                         {
-
                             App.UltimateCharacter.Feet.Icon = feetUri.Value.AbsoluteUri;
                         }
                     }
@@ -162,7 +154,6 @@ namespace GearInsight.Models
                         ItemMedia wristIcon = wristMedia.Value;
                         foreach (var wristUri in wristIcon.Assets)
                         {
-
                             App.UltimateCharacter.Wrist.Icon = wristUri.Value.AbsoluteUri;
                         }
                     }
@@ -177,7 +168,6 @@ namespace GearInsight.Models
                         ItemMedia handsIcon = handsMedia.Value;
                         foreach (var handsUri in handsIcon.Assets)
                         {
-
                             App.UltimateCharacter.Hands.Icon = handsUri.Value.AbsoluteUri;
                         }
                     }
@@ -192,7 +182,6 @@ namespace GearInsight.Models
                         ItemMedia ring1Icon = ring1Media.Value;
                         foreach (var ring1Uri in ring1Icon.Assets)
                         {
-
                             App.UltimateCharacter.Ring1.Icon = ring1Uri.Value.AbsoluteUri;
                         }
                     }
@@ -207,7 +196,6 @@ namespace GearInsight.Models
                         ItemMedia ring2Icon = ring2Media.Value;
                         foreach (var ring2Uri in ring2Icon.Assets)
                         {
-
                             App.UltimateCharacter.Ring2.Icon = ring2Uri.Value.AbsoluteUri;
                         }
                     }
@@ -222,7 +210,6 @@ namespace GearInsight.Models
                         ItemMedia trinket1Icon = trinket1Media.Value;
                         foreach (var trinket1Uri in trinket1Icon.Assets)
                         {
-
                             App.UltimateCharacter.Trinket1.Icon = trinket1Uri.Value.AbsoluteUri;
                         }
                     }
@@ -237,7 +224,6 @@ namespace GearInsight.Models
                         ItemMedia trinket2Icon = trinket2Media.Value;
                         foreach (var trinket2Uri in trinket2Icon.Assets)
                         {
-
                             App.UltimateCharacter.Trinket2.Icon = trinket2Uri.Value.AbsoluteUri;
                         }
                     }
@@ -252,7 +238,6 @@ namespace GearInsight.Models
                         ItemMedia backIcon = backMedia.Value;
                         foreach (var backUri in backIcon.Assets)
                         {
-
                             App.UltimateCharacter.Back.Icon = backUri.Value.AbsoluteUri;
                         }
                     }
@@ -267,7 +252,6 @@ namespace GearInsight.Models
                         ItemMedia mainhandIcon = mainhandMedia.Value;
                         foreach (var mainhandUri in mainhandIcon.Assets)
                         {
-
                             App.UltimateCharacter.Mainhand.Icon = mainhandUri.Value.AbsoluteUri;
                         }
                     }

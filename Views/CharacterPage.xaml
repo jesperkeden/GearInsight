@@ -10,26 +10,28 @@
              Title="CharacterPage">
 
     <Shell.BackButtonBehavior>
-        <BackButtonBehavior IsEnabled="False" IsVisible="False"></BackButtonBehavior>
+        <BackButtonBehavior 
+            IsEnabled="False" 
+            IsVisible="False">
+        </BackButtonBehavior>
     </Shell.BackButtonBehavior>
-
-
-
 
     <AbsoluteLayout>
         
-        <Grid AbsoluteLayout.LayoutBounds="560, 50" 
+        <Grid 
+            AbsoluteLayout.LayoutBounds="560, 50" 
             ColumnDefinitions="100, 340, 40" 
             RowDefinitions="75, 100">
 
-            <Label x:Name="CharacterName"
-                   Grid.Column="1"
-                   Grid.Row="0"
-                   Text="{Binding CharacterName, Source={Static local:App.UltimateCharacter}}" 
-                   TextColor="White"
-                   FontSize="48" 
-                   HorizontalOptions="Center"
-                   Padding="10">
+            <Label 
+                x:Name="CharacterName"
+                Grid.Column="1"
+                Grid.Row="0"
+                Text="{Binding CharacterName, Source={Static local:App.UltimateCharacter}}" 
+                TextColor="White"
+                FontSize="48" 
+                HorizontalOptions="Center"
+                Padding="10">
             </Label>
 
             <Image
@@ -98,7 +100,7 @@
 
         <Frame AbsoluteLayout.LayoutBounds="10, 130"
                WidthRequest="310"
-               HeightRequest="230"
+               HeightRequest="190"
                BackgroundColor="black"
                BorderColor="Transparent"
                Opacity="0.5"
@@ -106,76 +108,79 @@
             <VerticalStackLayout>
 
                 <Label
-               Text="{Binding LastLogin, Source={Static local:App.UltimateCharacter}, StringFormat='Last seen: {0}'}"
-               TextColor="White"
-               FontSize="18">
+                    
+                    Text="{Binding LastLogin, Source={Static local:App.UltimateCharacter}, StringFormat='Last seen: {0:dd/MM/yyyy HH:mm:ss}'}"
+                    TextColor="White"
+                    FontSize="18">
                 </Label>
 
                 <Label
-               Text="{Binding Faction, Source={Static local:App.UltimateCharacter}, StringFormat='Faction: {0}'}"
-               TextColor="White"
-               FontSize="18">
+                   Text="{Binding Faction, Source={Static local:App.UltimateCharacter}, StringFormat='Faction: {0}'}"
+                   TextColor="White"
+                   FontSize="18">
                 </Label>
 
                 <Label
-               Text="{Binding CurrentGuild, Source={Static local:App.UltimateCharacter}, StringFormat='Guild: {0}'}"
-               TextColor="White"
-               FontSize="18">
+                   Text="{Binding CurrentGuild, Source={Static local:App.UltimateCharacter}, StringFormat='Guild: {0}'}"
+                   TextColor="White"
+                   FontSize="18">
                 </Label>
 
                 <Label
-               Text="{Binding PlayedRace, Source={Static local:App.UltimateCharacter}, StringFormat='Race: {0}'}"
-               TextColor="White"
-               FontSize="18">
+                   Text="{Binding PlayedRace, Source={Static local:App.UltimateCharacter}, StringFormat='Race: {0}'}"
+                   TextColor="White"
+                   FontSize="18">
                 </Label>
 
                 <Label
-               Text="{Binding AvgIlvl, Source={Static local:App.UltimateCharacter}, StringFormat='Avg itemlevel: {0}'}"
-               TextColor="White"
-               FontSize="18">
+                   Text="{Binding AvgIlvl, Source={Static local:App.UltimateCharacter}, StringFormat='Avg itemlevel: {0}'}"
+                   TextColor="White"
+                   FontSize="18">
                 </Label>
 
                 <Label
-               Text="{Binding AchievementPoints, Source={Static local:App.UltimateCharacter}, StringFormat='Achievementpoints: {0}'}"
-               TextColor="White"
-               FontSize="18">
+                   Text="{Binding AchievementPoints, Source={Static local:App.UltimateCharacter}, StringFormat='Achievementpoints: {0}'}"
+                   TextColor="White"
+                   FontSize="18">
                 </Label>
             </VerticalStackLayout>
         </Frame>
 
-        <Button AbsoluteLayout.LayoutBounds="20, 20, 100, 50" 
-                Text="Go back" 
-                x:Name="GoBackToMainPage" 
-                Clicked="GoBackToMainPage_Clicked" 
-                HeightRequest="20"
-                BackgroundColor="#342f2d"
-                BorderColor="#1a1a1a"                
-                BorderWidth="2"
-                CornerRadius="5"              
-                HorizontalOptions="Center">
-            
+        <Button 
+            AbsoluteLayout.LayoutBounds="20, 20, 100, 50" 
+            Text="Go back" 
+            x:Name="GoBackToMainPage" 
+            Clicked="GoBackToMainPage_Clicked" 
+            HeightRequest="20"
+            BackgroundColor="#342f2d"
+            BorderColor="#1a1a1a"                
+            BorderWidth="2"
+            CornerRadius="5"              
+            HorizontalOptions="Center">
         </Button>
 
-        <Button AbsoluteLayout.LayoutBounds="112, 360, 100, 50" 
-                Text="Refresh" 
-                x:Name="RefreshCharacterPage" 
-                Clicked="RefreshCharacterPage_Clicked"
-                HeightRequest="20"
-                BackgroundColor="#342f2d"
-                BorderColor="#1a1a1a"                
-                BorderWidth="2"
-                CornerRadius="5"              
-                HorizontalOptions="Center">
+        <Button 
+            AbsoluteLayout.LayoutBounds="112, 320, 100, 50" 
+            Text="Refresh" 
+            x:Name="RefreshCharacterPage" 
+            Clicked="RefreshCharacterPage_Clicked"
+            HeightRequest="20"
+            BackgroundColor="#342f2d"
+            BorderColor="#1a1a1a"                
+            BorderWidth="2"
+            CornerRadius="5"              
+            HorizontalOptions="Center">
         </Button>
 
-        <Image  AbsoluteLayout.LayoutBounds="440, 190, 800, 600 " 
-                Source="{Binding CharacterImage, Source={Static local:App.UltimateCharacter}}"  
-                Aspect="AspectFill">
+        <Image  
+            AbsoluteLayout.LayoutBounds="440, 190, 800, 600 " 
+            Source="{Binding CharacterImage, Source={Static local:App.UltimateCharacter}}"  
+            Aspect="AspectFill">
         </Image>
 
         <!--Leftcollumn Interface-->
         
-        <VerticalStackLayout AbsoluteLayout.LayoutBounds="320, 130" >
+        <VerticalStackLayout AbsoluteLayout.LayoutBounds="320, 130">
 
             <Grid RowDefinitions="*, *, *, *, *, *, *, *"
                 ColumnDefinitions="*, 300"
@@ -184,305 +189,342 @@
                 Padding="10">
 
                 <!--Head-->
+                <Frame 
+                    x:Name="HeadFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, 0, 0, -1" 
+                    BorderColor="{Binding HeadColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="0" 
+                    Grid.Column="0">
 
-                <Frame x:Name="HeadFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, 0, 0, -1" 
-                       BorderColor="{Binding HeadColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="0" 
-                       Grid.Column="0" >
-
-                    <Image x:Name="head" Source="{Binding Head.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        x:Name="head" 
+                        Source="{Binding Head.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="1" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
-                    
-                    <Label Text="{Binding HeadName}"
-                           x:Name="HeadLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           FontAttributes="Bold"
-                           TextColor="{Binding HeadColor}"
-                           HorizontalOptions="Start">
+                <Grid 
+                    Grid.Column="1" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
+
+                    <Label 
+                        Text="{Binding HeadName}"
+                        x:Name="HeadLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        TextColor="{Binding HeadColor}"
+                        HorizontalOptions="Start">
                     </Label>
 
-                    <Label Text="{Binding Head.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           FontSize="12"
-                           TextColor="White"
-                           HorizontalOptions="Start">
+                    <Label 
+                        Text="{Binding Head.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        FontSize="12"
+                        TextColor="White"
+                        HorizontalOptions="Start">
                     </Label>
                 </Grid>
-                
+
 
                 <!--Neck-->
-                <Frame x:Name="NeckFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, 0, 0, -1" 
-                       BorderColor="{Binding NeckColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="1" 
-                       Grid.Column="0">
+                <Frame 
+                    x:Name="NeckFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, 0, 0, -1" 
+                    BorderColor="{Binding NeckColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="1" 
+                    Grid.Column="0">
 
-                    <Image Source="{Binding Neck.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Neck.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="1" 
-                      Grid.Row="1" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="1" 
+                    Grid.Row="1" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding NeckName}"
-                           x:Name="NeckLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding NeckColor}"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding NeckName}"
+                        x:Name="NeckLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding NeckColor}"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Neck.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Neck.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12">
                     </Label>
                 </Grid>
-                
+
 
                 <!--Shoulder-->
-                <Frame x:Name="ShoulderFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, 0, 0, -1" 
-                       BorderColor="{Binding ShoulderColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="2" 
-                       Grid.Column="0">
+                <Frame 
+                    x:Name="ShoulderFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, 0, 0, -1" 
+                    BorderColor="{Binding ShoulderColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="2" 
+                    Grid.Column="0">
 
-                    <Image Source="{Binding Shoulder.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Shoulder.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="1" 
-                      Grid.Row="2" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="1" 
+                    Grid.Row="2" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding ShoulderName}"
-                           x:Name="ShoulderLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding ShoulderColor}"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding ShoulderName}"
+                        x:Name="ShoulderLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding ShoulderColor}"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Shoulder.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Shoulder.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12">
                     </Label>
                 </Grid>
-                
+
 
                 <!--Back-->
-                <Frame x:Name="BackFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, 0, 0, 0" 
-                       BorderColor="{Binding BackColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="3" 
-                       Grid.Column="0">
+                <Frame 
+                    x:Name="BackFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, 0, 0, 0" 
+                    BorderColor="{Binding BackColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="3" 
+                    Grid.Column="0">
 
-                    <Image Source="{Binding Back.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Back.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="1" 
-                      Grid.Row="3"
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="1" 
+                    Grid.Row="3"
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding BackName}"
-                           x:Name="BackLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding BackColor}"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding BackName}"
+                        x:Name="BackLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding BackColor}"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Back.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Back.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12">
                     </Label>
                 </Grid>
-                
+
 
                 <!--Chest-->
-                <Frame x:Name="ChestFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, 0, 0, 0" 
-                       BorderColor="{Binding ChestColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="4" 
-                       Grid.Column="0">
+                <Frame 
+                    x:Name="ChestFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, 0, 0, 0" 
+                    BorderColor="{Binding ChestColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="4" 
+                    Grid.Column="0">
 
-                    <Image Source="{Binding Chest.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Chest.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="1" 
-                      Grid.Row="4" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="1" 
+                    Grid.Row="4" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding ChestName}"
-                           x:Name="ChestLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding ChestColor}"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding ChestName}"
+                        x:Name="ChestLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding ChestColor}"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Chest.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Chest.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12">
                     </Label>
                 </Grid>
-                
+
 
                 <!--Shirt-->
-                <Frame x:Name="ShirtFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, 0, 0, 0" 
-                       BorderColor="{Binding ShirtColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="5" 
-                       Grid.Column="0">
+                <Frame 
+                    x:Name="ShirtFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, 0, 0, 0" 
+                    BorderColor="{Binding ShirtColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="5" 
+                    Grid.Column="0">
 
-                    <Image Source="{Binding Shirt.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Shirt.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="1" 
-                      Grid.Row="5" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="1" 
+                    Grid.Row="5" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding ShirtName}"
-                           x:Name="ShirtLabel"
-                           Grid.Row="0"
-                           TextColor="{Binding ShirtColor}"
-                           FontSize="16"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding ShirtName}"
+                        x:Name="ShirtLabel"
+                        Grid.Row="0"
+                        TextColor="{Binding ShirtColor}"
+                        FontSize="16"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Shirt.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Shirt.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12">
                     </Label>
                 </Grid>
-                
+
 
                 <!--Tabard-->
-                <Frame x:Name="TabardFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, 0, 0, 0" 
-                       BorderColor="{Binding TabardColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="6" 
-                       Grid.Column="0">
+                <Frame 
+                    x:Name="TabardFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, 0, 0, 0" 
+                    BorderColor="{Binding TabardColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="6" 
+                    Grid.Column="0">
 
-                    <Image Source="{Binding Tabard.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Tabard.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="1" 
-                      Grid.Row="6" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="1" 
+                    Grid.Row="6" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding TabardName}"
-                           x:Name="TabardLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding TabardColor}"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding TabardName}"
+                        x:Name="TabardLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding TabardColor}"
+                        FontAttributes="Bold">
                     </Label>
-                </Grid>                
+                </Grid>
 
                 <!--Wrist-->
-                <Frame x:Name="WristFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, 0, 0, 0" 
-                       BorderColor="{Binding WristColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="7" 
-                       Grid.Column="0">
+                <Frame 
+                    x:Name="WristFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, 0, 0, 0" 
+                    BorderColor="{Binding WristColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="7" 
+                    Grid.Column="0">
 
-                    <Image Source="{Binding Wrist.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Wrist.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="1" 
-                      Grid.Row="7" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="1" 
+                    Grid.Row="7" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding WristName}"
-                           x:Name="WristLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding WristColor}"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding WristName}"
+                        x:Name="WristLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding WristColor}"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Wrist.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Wrist.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12">
                     </Label>
-                </Grid>               
+                </Grid>
             </Grid>
-
-
         </VerticalStackLayout>
 
         <!--RightCollumn Interface-->
@@ -491,324 +533,365 @@
                              HorizontalOptions="End">
 
             <Grid RowDefinitions=" *, *, *, *, *, *, *, *"
-                      ColumnDefinitions="300, *"
-                      RowSpacing="20"
-                      Margin="5"
-                      Padding="10">
+                  ColumnDefinitions="300, *"
+                  RowSpacing="20"
+                  Margin="5"
+                  Padding="10">
 
                 <!--Hands-->
-                <Frame x:Name="HandsFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, -2, -7, 0" 
-                       BorderColor="{Binding HandsColor}" 
-                       CornerRadius="4" 
-                       Grid.Column="1">
+                <Frame 
+                    x:Name="HandsFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, -2, -7, 0" 
+                    BorderColor="{Binding HandsColor}" 
+                    CornerRadius="4" 
+                    Grid.Column="1">
 
-                    <Image Source="{Binding Hands.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Hands.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="0" 
-                      RowDefinitions="2*, *" 
-                      Padding="3" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="0" 
+                    RowDefinitions="2*, *" 
+                    Padding="3" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding HandsName}"
-                           x:Name="HandsLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding HandsColor}"
-                           HorizontalOptions="End"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding HandsName}"
+                        x:Name="HandsLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding HandsColor}"
+                        HorizontalOptions="End"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Hands.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           HorizontalOptions="End"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Hands.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        HorizontalOptions="End"
+                        FontSize="12">
                     </Label>
                 </Grid>
 
 
                 <!--Waist-->
-                <Frame x:Name="WaistFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, -2, -7, 0" 
-                       BorderColor="{Binding WaistColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="1" 
-                       Grid.Column="1">
-                    <Image Source="{Binding Waist.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                <Frame 
+                    x:Name="WaistFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, -2, -7, 0" 
+                    BorderColor="{Binding WaistColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="1" 
+                    Grid.Column="1">
+                    
+                    <Image 
+                        Source="{Binding Waist.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="0" 
-                      Grid.Row="1" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="0" 
+                    Grid.Row="1" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding WaistName}"
-                           x:Name="WaistLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding WaistColor}"
-                           HorizontalOptions="End"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding WaistName}"
+                        x:Name="WaistLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding WaistColor}"
+                        HorizontalOptions="End"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Waist.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           HorizontalOptions="End"
-                           TextColor="White"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Waist.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        HorizontalOptions="End"
+                        TextColor="White"
+                        FontSize="12">
                     </Label>
                 </Grid>
 
 
                 <!--Legs-->
-                <Frame x:Name="LegsFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, -2, -7, 0" 
-                       BorderColor="{Binding LegsColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="2" 
-                       Grid.Column="1">
+                <Frame 
+                    x:Name="LegsFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, -2, -7, 0" 
+                    BorderColor="{Binding LegsColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="2" 
+                    Grid.Column="1">
 
-                    <Image Source="{Binding Legs.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Legs.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="0" 
-                      Grid.Row="2" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="0" 
+                    Grid.Row="2" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding LegsName}"
-                           x:Name="LegsLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding LegsColor}"
-                           HorizontalOptions="End"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding LegsName}"
+                        x:Name="LegsLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding LegsColor}"
+                        HorizontalOptions="End"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Legs.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           HorizontalOptions="End"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Legs.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        HorizontalOptions="End"
+                        FontSize="12">
                     </Label>
                 </Grid>
 
 
                 <!--Feet-->
-                <Frame x:Name="FeetFrame" 
-                       Padding="0 , 0" 
-                       Margin="0, -2, -7, 0" 
-                       BorderColor="{Binding FeetColor}" 
-                       CornerRadius="4" 
-                       Grid.Row="3" 
-                       Grid.Column="1">
+                <Frame 
+                    x:Name="FeetFrame" 
+                    Padding="0 , 0" 
+                    Margin="0, -2, -7, 0" 
+                    BorderColor="{Binding FeetColor}" 
+                    CornerRadius="4" 
+                    Grid.Row="3" 
+                    Grid.Column="1">
 
-                    <Image Source="{Binding Feet.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Feet.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="0" 
-                      Grid.Row="3" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="0" 
+                    Grid.Row="3" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding FeetName}"
-                           x:Name="FeetLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding FeetColor}"
-                           HorizontalOptions="End"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding FeetName}"
+                        x:Name="FeetLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding FeetColor}"
+                        HorizontalOptions="End"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Feet.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           HorizontalOptions="End"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Feet.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        HorizontalOptions="End"
+                        FontSize="12">
                     </Label>
                 </Grid>
 
 
                 <!--Ring1-->
-                <Frame x:Name="Ring1Frame" 
-                       Padding="0 , 0" 
-                       Margin="0, -2, -7, 0" 
-                       BorderColor="{Binding Ring1Color}" 
-                       CornerRadius="4" 
-                       Grid.Row="4" 
-                       Grid.Column="1">
+                <Frame 
+                    x:Name="Ring1Frame" 
+                    Padding="0 , 0" 
+                    Margin="0, -2, -7, 0" 
+                    BorderColor="{Binding Ring1Color}" 
+                    CornerRadius="4" 
+                    Grid.Row="4" 
+                    Grid.Column="1">
 
-                    <Image Source="{Binding Ring1.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Ring1.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="0" 
-                      Grid.Row="4" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="0" 
+                    Grid.Row="4" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding Ring1Name}"
-                           x:Name="Ring1Label"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding Ring1Color}"
-                           HorizontalOptions="End"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding Ring1Name}"
+                        x:Name="Ring1Label"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding Ring1Color}"
+                        HorizontalOptions="End"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Ring1.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           HorizontalOptions="End"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Ring1.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        HorizontalOptions="End"
+                        FontSize="12">
                     </Label>
                 </Grid>
 
 
                 <!--Ring2-->
-                <Frame x:Name="Ring2Frame" 
-                       Padding="0 , 0" 
-                       Margin="0, -2, -7, 0" 
-                       BorderColor="{Binding Ring2Color}" 
-                       CornerRadius="4" 
-                       Grid.Row="5" 
-                       Grid.Column="1">
+                <Frame 
+                    x:Name="Ring2Frame" 
+                    Padding="0 , 0" 
+                    Margin="0, -2, -7, 0" 
+                    BorderColor="{Binding Ring2Color}" 
+                    CornerRadius="4" 
+                    Grid.Row="5" 
+                    Grid.Column="1">
 
-                    <Image Source="{Binding Ring2.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Ring2.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="0" 
-                      Grid.Row="5" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="0" 
+                    Grid.Row="5" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding Ring2Name}"
-                           x:Name="Ring2Label"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding Ring2Color}"
-                           HorizontalOptions="End"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding Ring2Name}"
+                        x:Name="Ring2Label"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding Ring2Color}"
+                        HorizontalOptions="End"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Ring2.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           HorizontalOptions="End"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Ring2.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        HorizontalOptions="End"
+                        FontSize="12">
                     </Label>
                 </Grid>
 
 
                 <!--Trinket1-->
-                <Frame x:Name="Trinket1Frame" 
-                       Padding="0 , 0" 
-                       Margin="0, -2, -7, 0" 
-                       BorderColor="{Binding Trinket1Color}" 
-                       CornerRadius="4" 
-                       Grid.Row="6" 
-                       Grid.Column="1">
+                <Frame 
+                    x:Name="Trinket1Frame" 
+                    Padding="0 , 0" 
+                    Margin="0, -2, -7, 0" 
+                    BorderColor="{Binding Trinket1Color}" 
+                    CornerRadius="4" 
+                    Grid.Row="6" 
+                    Grid.Column="1">
 
-                    <Image Source="{Binding Trinket1.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Trinket1.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="0" 
-                      Grid.Row="6" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="0" 
+                    Grid.Row="6" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding Trinket1Name}"
-                           x:Name="Trinket1Label"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding Trinket1Color}"
-                           HorizontalOptions="End"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding Trinket1Name}"
+                        x:Name="Trinket1Label"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding Trinket1Color}"
+                        HorizontalOptions="End"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Trinket1.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           FontSize="12"
-                           HorizontalOptions="End">
+                    <Label 
+                        Text="{Binding Trinket1.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalOptions="End">
                     </Label>
                 </Grid>
 
 
                 <!--Trinket2-->
-                <Frame x:Name="Trinket2Frame" 
-                       Padding="0 , 0" 
-                       Margin="0, -2, -7, 0" 
-                       BorderColor="{Binding Trinket2Color}" 
-                       CornerRadius="4" 
-                       Grid.Row="7" 
-                       Grid.Column="1">
+                <Frame 
+                    x:Name="Trinket2Frame" 
+                    Padding="0 , 0" 
+                    Margin="0, -2, -7, 0" 
+                    BorderColor="{Binding Trinket2Color}" 
+                    CornerRadius="4" 
+                    Grid.Row="7" 
+                    Grid.Column="1">
 
-                    <Image Source="{Binding Trinket2.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Trinket2.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
-                <Grid Grid.Column="0" 
-                      Grid.Row="7" 
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="0" 
+                    Grid.Row="7" 
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding Trinket2Name}"
-                           x:Name="Trinket2Label"
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding Trinket2Color}"
-                           FontAttributes="Bold"
-                           HorizontalOptions="End">
+                    <Label 
+                        Text="{Binding Trinket2Name}"
+                        x:Name="Trinket2Label"
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding Trinket2Color}"
+                        FontAttributes="Bold"
+                        HorizontalOptions="End">
                     </Label>
 
-                    <Label Text="{Binding Trinket2.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           TextColor="White"
-                           FontSize="12"
-                           HorizontalOptions="End">
+                    <Label 
+                        Text="{Binding Trinket2.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalOptions="End">
                     </Label>
                 </Grid>
             </Grid>
@@ -816,140 +899,156 @@
     
         <!--MidCollumn Interface-->
         
-        <VerticalStackLayout AbsoluteLayout.LayoutBounds="490, 700, 700, 700">
-            <Grid ColumnDefinitions="3*, 50, 50, 3*"
-                          RowDefinitions="50"                        
-                          ColumnSpacing="10"
-                          Margin="0"
-                          Padding="0">
+        <VerticalStackLayout 
+            AbsoluteLayout.LayoutBounds="490, 700, 700, 700">
+            
+            <Grid
+                ColumnDefinitions="3*, 50, 50, 3*"
+                RowDefinitions="50"                        
+                ColumnSpacing="10"
+                Margin="0"
+                Padding="0">
 
-                <Grid Grid.Column="0"  
-                      RowDefinitions="2*, *" 
-                      Padding="5" 
-                      RowSpacing="-2">
+                <Grid 
+                    Grid.Column="0"  
+                    RowDefinitions="2*, *" 
+                    Padding="5" 
+                    RowSpacing="-2">
 
-                    <Label Text="{Binding MainhandName}"
-                           x:Name="MainhandLabel"
-                           Grid.Row="0"
-                           FontSize="16"
-                           HorizontalOptions="End"
-                           TextColor="{Binding MainhandColor}"
-                           FontAttributes="Bold">
+                    <Label 
+                        Text="{Binding MainhandName}"
+                        x:Name="MainhandLabel"
+                        Grid.Row="0"
+                        FontSize="16"
+                        HorizontalOptions="End"
+                        TextColor="{Binding MainhandColor}"
+                        FontAttributes="Bold">
                     </Label>
 
-                    <Label Text="{Binding Mainhand.ILevel, Source={Static local:App.UltimateCharacter}}"                         
-                           Grid.Row="1"
-                           HorizontalOptions="End"
-                           TextColor="White"
-                           FontSize="12">
-                    </Label>
-                </Grid>
-
-
-
-
-                <Grid Grid.Column="3" 
-                      RowDefinitions="2*, *"  
-                      RowSpacing="-2">
-
-                    <Label Text="{Binding OffhandName}"
-                           x:Name="OffhandLabel"        
-                           Grid.Row="0"
-                           FontSize="16"
-                           TextColor="{Binding OffhandColor}"
-                           HorizontalOptions="Start"
-                           FontAttributes="Bold">
-                    </Label>
-
-                    <Label Text="{Binding Offhand.ILevel, Source={Static local:App.UltimateCharacter}}" 
-                           HorizontalOptions="Start"
-                           Grid.Row="1"
-                           TextColor="White"
-                           FontSize="12">
+                    <Label 
+                        Text="{Binding Mainhand.ILevel, Source={Static local:App.UltimateCharacter}}"                         
+                        Grid.Row="1"
+                        HorizontalOptions="End"
+                        TextColor="White"
+                        FontSize="12">
                     </Label>
                 </Grid>
 
+                <Grid 
+                    Grid.Column="3" 
+                    RowDefinitions="2*, *"  
+                    RowSpacing="-2">
 
+                    <Label 
+                        Text="{Binding OffhandName}"
+                        x:Name="OffhandLabel"        
+                        Grid.Row="0"
+                        FontSize="16"
+                        TextColor="{Binding OffhandColor}"
+                        HorizontalOptions="Start"
+                        FontAttributes="Bold">
+                    </Label>
 
+                    <Label 
+                        Text="{Binding Offhand.ILevel, Source={Static local:App.UltimateCharacter}}" 
+                        HorizontalOptions="Start"
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12">
+                    </Label>
+                </Grid>
 
                 <!--MainHand-->
-                <Frame x:Name="MainhandFrame" 
-                       Grid.Column="1" 
-                       Padding="0 , 0" 
-                       Margin="0, 0, 0, 0" 
-                       BorderColor="{Binding MainhandColor}" 
-                       CornerRadius="4">
+                <Frame 
+                    x:Name="MainhandFrame" 
+                    Grid.Column="1" 
+                    Padding="0 , 0" 
+                    Margin="0, 0, 0, 0" 
+                    BorderColor="{Binding MainhandColor}" 
+                    CornerRadius="4">
 
-                    <Image Source="{Binding Mainhand.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"
-                           WidthRequest="50"                                   
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Mainhand.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"
+                        WidthRequest="50"                                   
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
 
 
                 <!--OffHand-->
-                <Frame x:Name="OffhandFrame" 
-                       Grid.Column="2" 
-                       Padding="0, 0" 
-                       Margin="0, 0, 0, 0" 
-                       CornerRadius="4" 
-                       BorderColor="{Binding OffhandColor}">
+                <Frame 
+                    x:Name="OffhandFrame" 
+                    Grid.Column="2" 
+                    Padding="0, 0" 
+                    Margin="0, 0, 0, 0" 
+                    CornerRadius="4" 
+                    BorderColor="{Binding OffhandColor}">
 
-                    <Image Source="{Binding Offhand.Icon, Source={Static local:App.UltimateCharacter}}"
-                           HeightRequest="50"                                   
-                           WidthRequest="50"                                   
-                           Aspect="AspectFit">
+                    <Image 
+                        Source="{Binding Offhand.Icon, Source={Static local:App.UltimateCharacter}}"
+                        HeightRequest="50"                                   
+                        WidthRequest="50"                                   
+                        Aspect="AspectFit">
                     </Image>
                 </Frame>
             </Grid>
         </VerticalStackLayout>
 
-        <Grid AbsoluteLayout.LayoutBounds="585, 800" 
-              RowDefinitions="50, 50" 
-              ColumnDefinitions="110, 110, 110, 120"
-              ColumnSpacing="40"
-              RowSpacing="10">
+        <Grid 
+            AbsoluteLayout.LayoutBounds="585, 800" 
+            RowDefinitions="50, 50" 
+            ColumnDefinitions="110, 110, 110, 120"
+            ColumnSpacing="40"
+            RowSpacing="10">
+            
+            <Grid 
+                Grid.Row="0" 
+                Grid.Column="0" 
+                ColumnDefinitions="50, 200" 
+                Padding="5">
 
+                <Image 
+                    Source="health.png">
+                </Image>
 
-            <Grid Grid.Row="0" 
-                  Grid.Column="0" 
-                  ColumnDefinitions="50, 200" 
-                  Padding="5">
+                <Grid 
+                    Grid.Column="1" 
+                    RowDefinitions="*,*">
 
-                <Image Source="health.png"></Image>
-
-                <Grid Grid.Column="1" 
-                      RowDefinitions="*,*">
-
-                    <Label Text="{Binding Health, Source={Static local:App.UltimateCharacter}}"
-                           TextColor="White">
+                    <Label 
+                        Text="{Binding Health, Source={Static local:App.UltimateCharacter}}"
+                        TextColor="White">
                     </Label>
 
-                    <Label TextColor="White" 
-                           Grid.Row="1" 
-                           Text="Health">
+                    <Label 
+                        TextColor="White" 
+                        Grid.Row="1" 
+                        Text="Health">
                     </Label>
                 </Grid>
             </Grid>
 
-            <Grid x:Name="CritGrid"
-                  Grid.Row="1" 
-                  Grid.Column="0" 
-                  ColumnDefinitions="50, 200" 
-                  Padding="5"
-                  ToolTipProperties.Text="{Binding CritTooltip}">
+            <Grid 
+                x:Name="CritGrid"
+                Grid.Row="1" 
+                Grid.Column="0" 
+                ColumnDefinitions="50, 200" 
+                Padding="5"
+                ToolTipProperties.Text="{Binding CritTooltip}">
 
                 <Image 
                     Source="crit.png">
                 </Image>
 
-                <Grid Grid.Column="1" 
-                      RowDefinitions="*,*">
+                <Grid 
+                    Grid.Column="1" 
+                    RowDefinitions="*,*">
 
-                    <Label x:Name="CritStat" 
-                           Text="{Binding SpellCrit.Percent, Source={Static local:App.UltimateCharacter}}"
-                           TextColor="White">
+                    <Label 
+                        x:Name="CritStat" 
+                        Text="{Binding SpellCrit.Percent, Source={Static local:App.UltimateCharacter}}"
+                        TextColor="White">
                     </Label>
 
                     <Label 
@@ -960,151 +1059,176 @@
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="0" 
-                  Grid.Column="1" 
-                  ColumnDefinitions="50, 200" 
-                  Padding="5">
+            <Grid 
+                Grid.Row="0" 
+                Grid.Column="1" 
+                ColumnDefinitions="50, 200" 
+                Padding="5">
 
                 <Image 
                     x:Name="PowerImg"
                     Source="mana.png">
                 </Image>
 
-                <Grid Grid.Column="1" 
-                      RowDefinitions="*,*">
+                <Grid 
+                    Grid.Column="1" 
+                    RowDefinitions="*,*">
 
-                    <Label x:Name="PowerStat"
-                           Text="{Binding Power.Rating, Source={Static local:App.UltimateCharacter}}"
-                           TextColor="White">
+                    <Label 
+                        x:Name="PowerStat"
+                        Text="{Binding Power.Rating, Source={Static local:App.UltimateCharacter}}"
+                        TextColor="White">
                     </Label>
 
-                    <Label TextColor="White" 
-                           x:Name="PowerLabel"  
-                           Grid.Row="1" 
-                           Text="Mana">
+                    <Label 
+                        TextColor="White" 
+                        x:Name="PowerLabel"  
+                        Grid.Row="1" 
+                        Text="Mana">
                     </Label>
                 </Grid>
             </Grid>
 
-            <Grid x:Name="HasteGrid"
-                  Grid.Row="1" 
-                  Grid.Column="1" 
-                  ColumnDefinitions="50, 200" 
-                  Padding="5"
-                  ToolTipProperties.Text="{Binding HasteTooltip}">
+            <Grid 
+                x:Name="HasteGrid"
+                Grid.Row="1" 
+                Grid.Column="1" 
+                ColumnDefinitions="50, 200" 
+                Padding="5"
+                ToolTipProperties.Text="{Binding HasteTooltip}">
 
                 <Image 
                     Source="haste.png">
                 </Image>
 
-                <Grid Grid.Column="1" 
-                      RowDefinitions="*,*">
+                <Grid 
+                    Grid.Column="1" 
+                    RowDefinitions="*,*">
 
-                    <Label x:Name="HasteStat" 
-                           Text="{Binding SpellHaste.Percent, Source={Static local:App.UltimateCharacter}}"
-                           TextColor="White">
+                    <Label 
+                        x:Name="HasteStat" 
+                        Text="{Binding SpellHaste.Percent, Source={Static local:App.UltimateCharacter}}"
+                        TextColor="White">
                     </Label>
 
-                    <Label TextColor="White" 
-                           Grid.Row="1" 
-                           Text="Haste">
+                    <Label 
+                        TextColor="White" 
+                        Grid.Row="1" 
+                        Text="Haste">
                     </Label>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="0" 
-                  Grid.Column="2" 
-                  ColumnDefinitions="50, 200" 
-                  Padding="5">
+            <Grid 
+                Grid.Row="0" 
+                Grid.Column="2" 
+                ColumnDefinitions="50, 200" 
+                Padding="5">
 
                 <Image 
                     x:Name="BaseStatImg" 
                     Source="intellect.png">
                 </Image>
 
-                <Grid Grid.Column="1" 
-                      RowDefinitions="*,*">
+                <Grid 
+                    Grid.Column="1" 
+                    RowDefinitions="*,*">
 
-                    <Label x:Name="BaseStat"
-                           Text="{Binding Intellect.Rating, Source={Static local:App.UltimateCharacter}}"
-                           TextColor="White">
+                    <Label 
+                        x:Name="BaseStat"
+                        Text="{Binding Intellect.Rating, Source={Static local:App.UltimateCharacter}}"
+                        TextColor="White">
                     </Label>
 
-                    <Label x:Name="BaseLabel" 
-                           TextColor="White" 
-                           Grid.Row="1" 
-                           Text="Intellect">
+                    <Label 
+                        x:Name="BaseLabel" 
+                        TextColor="White" 
+                        Grid.Row="1" 
+                        Text="Intellect">
                     </Label>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="1" 
-                  Grid.Column="2" 
-                  ColumnDefinitions="50, 200" 
-                  Padding="5"
-                  ToolTipProperties.Text="{Binding Mastery.Rating, Source={Static local:App.UltimateCharacter}, StringFormat='{0} Raiting'}">
+            <Grid 
+                Grid.Row="1" 
+                Grid.Column="2" 
+                ColumnDefinitions="50, 200" 
+                Padding="5"
+                ToolTipProperties.Text="{Binding Mastery.Rating, Source={Static local:App.UltimateCharacter}, StringFormat='{0} Raiting'}">
 
                 <Image 
                     Source="mastery.png">
                 </Image>
 
-                <Grid Grid.Column="1" RowDefinitions="*,*" >
+                <Grid 
+                    Grid.Column="1" 
+                    RowDefinitions="*,*">
 
-                    <Label x:Name="MasteryStat" Text="{Binding Mastery.Percent, Source={Static local:App.UltimateCharacter}}"
-                           TextColor="White">
+                    <Label 
+                        x:Name="MasteryStat" Text="{Binding Mastery.Percent, Source={Static local:App.UltimateCharacter}}"
+                        TextColor="White">
                     </Label>
 
-                    <Label TextColor="White" 
-                           Grid.Row="1" 
-                           Text="Mastery">
+                    <Label 
+                        TextColor="White" 
+                        Grid.Row="1" 
+                        Text="Mastery">
                     </Label>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="0" 
-                  Grid.Column="3" 
-                  ColumnDefinitions="50, 200" 
-                  Padding="5">
+            <Grid 
+                Grid.Row="0" 
+                Grid.Column="3" 
+                ColumnDefinitions="50, 200" 
+                Padding="5">
 
                 <Image 
                     Source="stamina.png">
                 </Image>
 
-                <Grid Grid.Column="1" 
-                      RowDefinitions="*,*">
+                <Grid 
+                    Grid.Column="1" 
+                    RowDefinitions="*,*">
 
-                    <Label Text="{Binding Stamina, Source={Static local:App.UltimateCharacter}}"
-                           TextColor="White">
+                    <Label 
+                        Text="{Binding Stamina, Source={Static local:App.UltimateCharacter}}"
+                        TextColor="White">
                     </Label>
 
-                    <Label TextColor="White" 
-                           Grid.Row="1" 
-                           Text="Stamina">
+                    <Label 
+                        TextColor="White" 
+                        Grid.Row="1" 
+                        Text="Stamina">
                     </Label>
                 </Grid>
             </Grid>
 
-            <Grid Grid.Row="1" 
-                  Grid.Column="3" 
-                  ColumnDefinitions="50, 200" 
-                  Padding="5"
-                  ToolTipProperties.Text="{Binding Versatility, Source={Static local:App.UltimateCharacter}, StringFormat='{0} Raiting'}">
+            <Grid 
+                Grid.Row="1" 
+                Grid.Column="3" 
+                ColumnDefinitions="50, 200" 
+                Padding="5"
+                ToolTipProperties.Text="{Binding Versatility, Source={Static local:App.UltimateCharacter}, StringFormat='{0} Raiting'}">
 
                 <Image 
                     Source="versatility.png">
                 </Image>
 
-                <Grid Grid.Column="1" 
-                      RowDefinitions="*,*" >
+                <Grid 
+                    Grid.Column="1" 
+                    RowDefinitions="*,*">
 
-                    <Label x:Name="VersStat" 
-                           Text="{Binding VersatilityPercent, Source={Static local:App.UltimateCharacter}}"
-                           TextColor="White">
+                    <Label 
+                        x:Name="VersStat" 
+                        Text="{Binding VersatilityPercent, Source={Static local:App.UltimateCharacter}}"
+                        TextColor="White">
                     </Label>
 
-                    <Label TextColor="White" 
-                           Grid.Row="1" 
-                           Text="Versatility">
+                    <Label 
+                        TextColor="White" 
+                        Grid.Row="1" 
+                        Text="Versatility">
                     </Label>
                 </Grid>
             </Grid>

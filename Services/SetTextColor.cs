@@ -25,7 +25,6 @@ namespace GearInsight.Services
             {
                 color = Color.FromArgb("#1eff00");
             }
-            
             else if (quality == "Artifact")
             {
                 color = Color.FromArgb("#e6cc80");
@@ -38,6 +37,7 @@ namespace GearInsight.Services
             {
                 color = Color.FromArgb("#afeeee");
             }
+
                 return color;
         }
 
@@ -98,6 +98,7 @@ namespace GearInsight.Services
             {
                 color = Color.FromArgb("#C69B6D");
             }
+
             return color;
         }
     }

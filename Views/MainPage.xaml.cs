@@ -6,7 +6,7 @@ namespace GearInsight;
 
 public partial class MainPage : ContentPage
 {
-    MainPageViewModel viewModel = new MainPageViewModel();
+    readonly MainPageViewModel viewModel = new();
 
     public MainPage()
 	{

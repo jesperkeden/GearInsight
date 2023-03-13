@@ -20,11 +20,10 @@ namespace GearInsight.Models
             RequestResult<CharacterProfileSummary> profile = await warcraftClient.GetCharacterProfileSummaryAsync(realm, character, "profile-eu");
             RequestResult<CharacterMediaSummary> charMedia = await warcraftClient.GetCharacterMediaSummaryAsync(realm, character, "profile-eu");
 
-
             App.UltimateCharacter.CharacterName = Helpers.FirstLetterCapital(character);
             App.UltimateCharacter.Realm = Helpers.FirstLetterCapital(realm);
 
-            //Activespec behövs för att köra stats
+            //Activespec behövs för att köra stats (bestämmer vilka stats som hämtas).
             App.UltimateCharacter.ActiveSpec = profile.Value.ActiveSpec.Name;
             App.UltimateCharacter.Faction = profile.Value.Faction.Name;
             App.UltimateCharacter.LastLogin = profile.Value.LastLoginTimestamp;
@@ -32,15 +31,14 @@ namespace GearInsight.Models
             App.UltimateCharacter.AvgIlvl = profile.Value.AverageItemLevel;
             App.UltimateCharacter.PlayedRace = profile.Value.Race.Name;
             App.UltimateCharacter.Level = profile.Value.Level;
+            App.UltimateCharacter.PlayedClass = profile.Value.CharacterClass.Name;
+
             if (profile.Value.Guild != null)
             {
                 App.UltimateCharacter.CurrentGuild = profile.Value.Guild.Name;
-
             }
-            App.UltimateCharacter.PlayedClass = profile.Value.CharacterClass.Name;
-            App.UltimateCharacter.CharacterImage = charMedia.Value.Assets[3].Value.AbsoluteUri;
 
-            
+            App.UltimateCharacter.CharacterImage = charMedia.Value.Assets[3].Value.AbsoluteUri;       
         }
 
         public static async Task<bool> CheckIfCharacterExist(string character, string realm)

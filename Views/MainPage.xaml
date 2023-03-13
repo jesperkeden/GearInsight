@@ -7,112 +7,127 @@
              x:Class="GearInsight.MainPage"
              Shell.NavBarIsVisible="False">
 
-
     <AbsoluteLayout>
         <toolkit:MediaElement 
-                      AbsoluteLayout.LayoutBounds="0, 0, 1680, 1050"
-                      x:Name="mediaElement"
-                      ShouldAutoPlay="False"
-                      ShouldLoopPlayback="True"
-                      ShouldShowPlaybackControls="False"
-                      Source="embed://sylvanas.mp4"
-                      CompressedLayout.IsHeadless="True"
-                      Aspect="Fill"
-                      />
+            x:Name="mediaElement"
+            AbsoluteLayout.LayoutBounds="0, 0, 1680, 1050"
+            ShouldAutoPlay="False"
+            ShouldLoopPlayback="True"
+            ShouldShowPlaybackControls="False"
+            Source="embed://sylvanas.mp4"
+            CompressedLayout.IsHeadless="True"
+            Aspect="Fill"/>
 
-        <Button AbsoluteLayout.LayoutBounds="1495, 2" 
-                Text="Start/Stop Animation" 
-                x:Name="Play" 
-                Clicked="Play_Clicked" 
-                HeightRequest="20"
-                BackgroundColor="#342f2d"
-                BorderColor="#1a1a1a"                
-                BorderWidth="2"
-                CornerRadius="5"              
-                HorizontalOptions="Center"
-                
-                
-                ></Button>
+        <Button 
+            x:Name="Play" 
+            AbsoluteLayout.LayoutBounds="1495, 2" 
+            Text="Start/Stop Animation" 
+            Clicked="Play_Clicked" 
+            HeightRequest="20"
+            BackgroundColor="#342f2d"
+            BorderColor="#1a1a1a"                
+            BorderWidth="2"
+            CornerRadius="5"              
+            HorizontalOptions="Center">
+        </Button>
 
-        <Entry AbsoluteLayout.LayoutBounds="750, 500" 
-                   x:Name="CharacterName"
-                   Placeholder="Enter character name"
-                   HorizontalOptions="Center" 
-                   WidthRequest="175"
-                   BackgroundColor="White"
-                   PlaceholderColor="#9d9d9d"
-                   VerticalTextAlignment="Center"
-                   HorizontalTextAlignment="Center"
-                   TextColor="#1a1716"
-                   Text="{Binding CharacterName}"
-               ></Entry>
+        <Entry 
+            x:Name="CharacterName"
+            AbsoluteLayout.LayoutBounds="750, 500" 
+            Placeholder="Enter character name"
+            HorizontalOptions="Center" 
+            WidthRequest="175"
+            BackgroundColor="White"
+            PlaceholderColor="#9d9d9d"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            TextColor="#1a1716"
+            Text="{Binding CharacterName}">
+        </Entry>
 
-        <Label x:Name="ErrorMsg" AbsoluteLayout.LayoutBounds="670, 600" FontSize="24" Text="{Binding Error}" TextColor="Black"></Label>
+        <Label 
+            x:Name="ErrorMsg" 
+            AbsoluteLayout.LayoutBounds="670, 600" 
+            FontSize="24" 
+            Text="{Binding Error}" 
+            TextColor="Black">
+        </Label>
 
-
-
-        <Frame AbsoluteLayout.LayoutBounds="1250, 110"
-               WidthRequest="400"
-               HeightRequest="800"
-               BackgroundColor="black"
-               BorderColor="Transparent"
-               Opacity="0.5"
-               HorizontalOptions="Center">
+        <Frame 
+            AbsoluteLayout.LayoutBounds="1250, 110"
+            WidthRequest="400"
+            HeightRequest="600"
+            BackgroundColor="black"
+            BorderColor="Transparent"
+            Opacity="0.5"
+            HorizontalOptions="Center">
             <VerticalStackLayout>
 
-                <Label HorizontalOptions="Center" FontSize="24" FontAttributes="Bold" TextColor="White" Text="Welcome!">
+                <Label 
+                    HorizontalOptions="Center" FontSize="24" FontAttributes="Bold" TextColor="White" Text="Welcome!">
                 </Label>
-                <Label FontSize="18" TextColor="White" Text="This is GearInsight, your quick and easy search engine to look up character like its 2009.&#x0d;&#x0a;In this current version, you can only search for characters on european realms.&#x0d;&#x0a;&#x0d;&#x0a;" ></Label>
-                <Label FontSize="18" TextColor="White" Text="Here are some sample characters for you to use unless you have one of your own.&#x0d;&#x0a;" ></Label>
-                <Label FontSize="18" TextColor="White" Text="Lockerinos - Stormscale&#x0d;&#x0a;Rpgodx - Stormscale&#x0d;&#x0a;Gingimage - Tarren Mill&#x0d;&#x0a;Yetï - Ravencrest&#x0d;&#x0a;Ramfam - Kazzak&#x0d;&#x0a;Dunndheal - Stormscale&#x0d;&#x0a;Barajoel - Stormscale&#x0d;&#x0a;;&#x0d;&#x0a;" ></Label>
-                <Label FontSize="18" TextColor="White" Text="Developed by Andreas Tollmar and Jesper Kedén for our architectural course @ Campus Nyköping, class of 2024." ></Label>
-                <Label FontSize="18" TextColor="White" Text="" ></Label>
 
-                
+                <Label 
+                    FontSize="18"
+                    TextColor="White" 
+                    Text="This is GearInsight, your quick and easy search engine to look up characters like its 2009.&#x0d;&#x0a;In this current version, you can only search for characters on european realms.&#x0d;&#x0a;&#x0d;&#x0a;">
+                </Label>
+
+                <Label 
+                    FontSize="18" 
+                    TextColor="White" 
+                    Text="Here are some sample characters for you to use unless you have one of your own.&#x0d;&#x0a;">
+                </Label>
+
+                <Label 
+                    FontSize="18" 
+                    TextColor="White" 
+                    Text="Lockerinos - Stormscale&#x0d;&#x0a;Rpgodx - Stormscale&#x0d;&#x0a;Gingimage - Tarren-Mill&#x0d;&#x0a;Yetï - Ravencrest&#x0d;&#x0a;Ramfam - Kazzak&#x0d;&#x0a;Dunndheal - Stormscale&#x0d;&#x0a;Barajoel - Stormscale&#x0d;&#x0a;;&#x0d;&#x0a;">
+                </Label>
+
+                <Label 
+                    FontSize="18" 
+                    TextColor="White" 
+                    Text="Developed by Andreas Tollmar and Jesper Kedén in 2023.">
+                </Label>
+
+                <Label 
+                    FontSize="18" 
+                    TextColor="White" 
+                    Text="">
+                </Label>
             </VerticalStackLayout>
-
-
         </Frame>
 
+        <Entry
+            AbsoluteLayout.LayoutBounds="714, 550"
+            Placeholder="Enter realm"
+            PlaceholderColor="#9d9d9d"
+            WidthRequest="250"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            BackgroundColor="White"
+            TextColor="#1a1716"
+            HorizontalOptions="Center"
+            Text="{Binding Realm}">
+        </Entry>
 
-        <Entry AbsoluteLayout.LayoutBounds="714, 550"
-                   Placeholder="Enter realm"
-                   PlaceholderColor="#9d9d9d"
-                   WidthRequest="250"
-                   VerticalTextAlignment="Center"
-                   HorizontalTextAlignment="Center"
-                   BackgroundColor="White"
-                   TextColor="#1a1716"
-                   HorizontalOptions="Center"
-                   Text="{Binding Realm}"
-               ></Entry>
+        <Button 
+            AbsoluteLayout.LayoutBounds="768, 650"
+            HeightRequest="25"
+            x:Name="GetCharacter"
+            Text="Search Character"
+            BackgroundColor="#342f2d"
+            BorderColor="#1a1a1a"                
+            BorderWidth="2"
+            CornerRadius="5"              
+            HorizontalOptions="Center"
+            Command="{Binding GetCharacterCommand}">
+        </Button>
 
-        <Button AbsoluteLayout.LayoutBounds="768, 650"
-                HeightRequest="25"
-                x:Name="GetCharacter"
-                Text="Search Character"
-                BackgroundColor="#342f2d"
-                BorderColor="#1a1a1a"                
-                BorderWidth="2"
-                CornerRadius="5"              
-                HorizontalOptions="Center"
-                Command="{Binding GetCharacterCommand}"
-                ></Button>
-
-        <Image Source="logo_gi.png" AbsoluteLayout.LayoutBounds="736, 298, 200, 200"
-
-               ></Image>
-
+        <Image 
+            AbsoluteLayout.LayoutBounds="736, 298, 200, 200"
+            Source="logo_gi.png">
+        </Image>
     </AbsoluteLayout>
-
-
-
-
-
-
-
-
-
-
-
 </ContentPage>
