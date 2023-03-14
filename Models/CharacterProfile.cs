@@ -29,7 +29,7 @@ namespace GearInsight.Models
             App.UltimateCharacter.Faction = profile.Value.Faction.Name;
             App.UltimateCharacter.LastLogin = profile.Value.LastLoginTimestamp;
             App.UltimateCharacter.AchievementPoints = profile.Value.AchievementPoints;
-            App.UltimateCharacter.AvgIlvl = profile.Value.AverageItemLevel;
+            App.UltimateCharacter.AvgIlvl = profile.Value.EquippedItemLevel;
             App.UltimateCharacter.PlayedRace = profile.Value.Race.Name;
             App.UltimateCharacter.Level = profile.Value.Level;
             App.UltimateCharacter.PlayedClass = profile.Value.CharacterClass.Name;

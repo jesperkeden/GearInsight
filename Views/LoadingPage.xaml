@@ -10,11 +10,11 @@
     
     <VerticalStackLayout VerticalOptions="Center">
 
-        <Grid RowDefinitions="*, 350, 200, 200, *">
+        <Grid RowDefinitions="*, 350, 200, 200, *" Margin="-5" RowSpacing="-65">
 
-            <Image Grid.Row="1" Source="logo_gearinsight2.png" HeightRequest="350" WidthRequest="350" ></Image>
+            <Image x:Name="logo" Grid.Row="1" Source="logo_gi_white.png" HeightRequest="300" WidthRequest="300" ></Image>
 
-            <Label Grid.Row="1" TextColor="White" Text="Loading character..." HorizontalOptions="Center" VerticalOptions="End"></Label>
+            <Label x:Name="LoadingLable" Grid.Row="1" TextColor="White" Text="Loading character..." HorizontalOptions="Center" VerticalOptions="End"></Label>
 
 
             <ProgressBar 
@@ -28,7 +28,7 @@
             </ProgressBar>
      
         
-            <Button Grid.Row="4" Text="Test" x:Name="TestButton" Clicked="TestButton_Clicked" WidthRequest="100" HeightRequest="100" ></Button>
+           
 
         </Grid>
     </VerticalStackLayout>
