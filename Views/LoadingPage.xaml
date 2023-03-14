@@ -2,11 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GearInsight.Views.LoadingPage"
-             Title="LoadingPage">
-    <VerticalStackLayout>
+             Title="LoadingPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="box_leather.jpg">
+
+    
+    
+    <VerticalStackLayout VerticalOptions="Center">
+
+        <Grid RowDefinitions="*, 350, 200, 200, *">
+
+            <Image Grid.Row="1" Source="logo_gearinsight2.png" HeightRequest="350" WidthRequest="350" ></Image>
+
+            <Label Grid.Row="1" TextColor="White" Text="Loading character..." HorizontalOptions="Center" VerticalOptions="End"></Label>
+
+
+            <ProgressBar 
+                Grid.Row="2" 
+                ProgressColor="White" 
+                x:Name="LoadingBar" 
+                WidthRequest="500" 
+                ScaleY="7" 
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center">
+            </ProgressBar>
+     
         
-        <Label Text="Hejhej"></Label>
-        
-        <ProgressBar x:Name="LoadingBar"  HeightRequest="50" ></ProgressBar>
+            <Button Grid.Row="4" Text="Test" x:Name="TestButton" Clicked="TestButton_Clicked" WidthRequest="100" HeightRequest="100" ></Button>
+
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
