@@ -26,7 +26,7 @@ public static class MauiProgram
 		builder.Services.AddSingleton<Character>();
 		
 		builder.Services.AddSingleton<Mongo>();
-		builder.Services.AddTransient<CharacterPageViewModel>();
+		// builder.Services.AddSingleton<CharacterPageViewModel>();
 		builder.Services.AddSingleton<MainPage>();
 
 

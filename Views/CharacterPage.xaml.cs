@@ -16,7 +16,7 @@ public partial class CharacterPage : ContentPage
 
     private async void GoBackToMainPage_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PopAsync();
+        await Navigation.PopToRootAsync();
     }
 
     protected override async void OnAppearing()
@@ -173,8 +173,7 @@ public partial class CharacterPage : ContentPage
 
     private async void RefreshCharacterPage_Clicked(object sender, EventArgs e)
     {
-        Task refresh = Mongo.RefreshData(App.UltimateCharacter.CharacterName.ToLower(), App.UltimateCharacter.Realm.ToLower());
-        await refresh;
-        await Navigation.PopAsync();
+        Task refresh = Mongo.RefreshData(App.UltimateCharacter.CharacterName.ToLower(), App.UltimateCharacter.Realm.ToLower());        
+        await Navigation.PushAsync(new LoadingPage());    
     }
 }
