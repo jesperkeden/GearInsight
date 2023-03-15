@@ -10,6 +10,7 @@ namespace GearInsight.Models
 {
     public class CharacterItems
     {
+        // Metod för att hämta items för en karaktär
         public static async Task FetcItemsAsync(string character, string realm)
         {
             string clientId = "c2409be1a9e2473890d079632a06a265";

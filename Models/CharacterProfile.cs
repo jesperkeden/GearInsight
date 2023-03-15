@@ -10,6 +10,7 @@ namespace GearInsight.Models
 {
     public class CharacterProfile
     {
+        // Metod för att hämta karaktär-profilen som behövs längre fram
         public static async Task FetchCharacterProfileAsync(string character, string realm)
         {
             character = character.ToLower();
@@ -24,7 +25,7 @@ namespace GearInsight.Models
             App.UltimateCharacter.CharacterName = Helpers.FirstLetterCapital(character);
             App.UltimateCharacter.Realm = Helpers.FirstLetterCapital(realm);
 
-            //Activespec behövs för att köra stats (bestämmer vilka stats som hämtas).
+            // Activespec behövs för att köra stats (bestämmer vilka stats som hämtas).
             App.UltimateCharacter.ActiveSpec = profile.Value.ActiveSpec.Name;
             App.UltimateCharacter.Faction = profile.Value.Faction.Name;
             App.UltimateCharacter.LastLogin = profile.Value.LastLoginTimestamp;

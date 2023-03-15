@@ -4,6 +4,7 @@ namespace GearInsight;
 
 public partial class App : Application
 {
+    // Skapar instancen av singleton
     public static Character UltimateCharacter { get; set; }
 
     public App(Character _ultimateCharacter)

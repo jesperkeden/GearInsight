@@ -33,6 +33,7 @@ public partial class MainPage : ContentPage
         base.OnAppearing();
         mediaElement.Play();
     }
+    
 
 }
 

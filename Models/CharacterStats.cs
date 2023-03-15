@@ -10,6 +10,7 @@ namespace GearInsight.Models
 {
     public class CharacterStats
     {
+        // Metod för att hämta stats till karaktären
         public static async Task FetcStatsAsync(string character, string realm)
         {
             string clientId = "c2409be1a9e2473890d079632a06a265";
