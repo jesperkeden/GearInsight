@@ -34,7 +34,7 @@
         <Entry 
             x:Name="CharacterName"
             AbsoluteLayout.LayoutBounds="750, 500" 
-            Placeholder="Enter character name"
+            Placeholder="Character Name"
             HorizontalOptions="Center" 
             WidthRequest="175"
             BackgroundColor="White"
@@ -56,7 +56,7 @@
         <Frame 
             AbsoluteLayout.LayoutBounds="1250, 110"
             WidthRequest="400"
-            HeightRequest="600"
+            HeightRequest="570"
             BackgroundColor="black"
             BorderColor="Transparent"
             Opacity="0.5"
@@ -70,7 +70,7 @@
                 <Label 
                     FontSize="18"
                     TextColor="White" 
-                    Text="This is GearInsight, your quick and easy search engine to look up characters like its 2009.&#x0d;&#x0a;In this current version, you can only search for characters on european realms.&#x0d;&#x0a;&#x0d;&#x0a;">
+                    Text="This is GearInsight, your quick and easy search application to look up your favorite characters like its 2007.&#x0d;&#x0a;In this current version, you can only search for characters on european realms.&#x0d;&#x0a;">
                 </Label>
 
                 <Label 
@@ -82,13 +82,13 @@
                 <Label 
                     FontSize="18" 
                     TextColor="White" 
-                    Text="Lockerinos - Stormscale&#x0d;&#x0a;Rpgodx - Stormscale&#x0d;&#x0a;Gingimage - Tarren-Mill&#x0d;&#x0a;Yetï - Ravencrest&#x0d;&#x0a;Ramfam - Kazzak&#x0d;&#x0a;Dunndheal - Stormscale&#x0d;&#x0a;Barajoel - Stormscale&#x0d;&#x0a;;&#x0d;&#x0a;">
+                    Text="Lockerinos - Stormscale&#x0d;&#x0a;Rpgodx - Stormscale&#x0d;&#x0a;Gingimage - Tarren-Mill&#x0d;&#x0a;Yetï - Ravencrest&#x0d;&#x0a;Ramfam - Kazzak&#x0d;&#x0a;Dunndheal - Stormscale&#x0d;&#x0a;Detrin - Stormscale&#x0d;&#x0a;&#x0d;&#x0a;">
                 </Label>
 
                 <Label 
                     FontSize="18" 
                     TextColor="White" 
-                    Text="Developed by Andreas Tollmar and Jesper Kedén in 2023.">
+                    Text="Developed in 2023 by &#x0d;&#x0a;Andreas Tollmar and Jesper Kedén.">
                 </Label>
 
                 <Label 
@@ -101,7 +101,7 @@
 
         <Entry
             AbsoluteLayout.LayoutBounds="714, 550"
-            Placeholder="Enter realm"
+            Placeholder="Realm"
             PlaceholderColor="#9d9d9d"
             WidthRequest="250"
             VerticalTextAlignment="Center"
