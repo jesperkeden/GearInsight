@@ -9,6 +9,8 @@ namespace GearInsight.Facade.ApplicationFacade
 {
     internal class FindCharacterFacade : Contracts.IFindCharacterFacade
     {
+        // Facade för att validera att karaktären existerar
+
         private readonly IValidationService _validationService;
 
         public FindCharacterFacade()
