@@ -12,6 +12,8 @@ using MongoDB.Driver;
 using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Maui.Core.Views;
 using CommunityToolkit.Maui.Core.Handlers;
+using GearInsight.Facade.Contracts;
+using GearInsight.Facade.ApplicationFacade;
 
 namespace GearInsight.ViewModels
 {
@@ -28,11 +30,13 @@ namespace GearInsight.ViewModels
         [RelayCommand]
         public async Task GetCharacterAsync()
         {
-            // En första felhantering för att kolla om det ens finns en karaktär med detta namn på den här servern
-            var characterExist = CharacterProfile.CheckIfCharacterExist(CharacterName, Realm);
+            IFindCharacterFacade _findCharacterFacade = new FindCharacterFacade();
 
+            // En facade för att kolla ifall karaktären existerar
+            var characterExist = _findCharacterFacade.ValidCharacter(CharacterName, Realm);
+            await characterExist;
             // Om hämtningen lyckas går vi vidare, annars får vi error msg
-            if (await characterExist == true)
+            if (characterExist.Result == true)
             {
                 Error = "";
                 Task GC = Mongo.CreateCharacter(CharacterName, Realm);
