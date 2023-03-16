@@ -24,7 +24,7 @@ public static class MauiProgram
 
 		// Designpattern Singleton
 		builder.Services.AddSingleton<Character>();
-		
+		// Hej hej
 		builder.Services.AddSingleton<Mongo>();		
 		builder.Services.AddSingleton<MainPage>();
 
