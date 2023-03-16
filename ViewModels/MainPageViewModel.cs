@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using GearInsight.Models;
 using GearInsight.Services;
 using GearInsight.Views;
-using MongoDB.Driver;
-using CommunityToolkit.Maui.Views;
-using CommunityToolkit.Maui.Core.Views;
-using CommunityToolkit.Maui.Core.Handlers;
 using GearInsight.Facade.Contracts;
 using GearInsight.Facade.ApplicationFacade;
 

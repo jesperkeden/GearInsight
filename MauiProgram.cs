@@ -1,8 +1,6 @@
 ﻿using CommunityToolkit.Maui;
 using GearInsight.Models;
 using GearInsight.Services;
-using GearInsight.ViewModels;
-using Microsoft.Extensions.Logging;
 
 namespace GearInsight;
 
@@ -24,15 +22,8 @@ public static class MauiProgram
 
 		// Designpattern Singleton
 		builder.Services.AddSingleton<Character>();
-		// Hej hej
 		builder.Services.AddSingleton<Mongo>();		
 		builder.Services.AddSingleton<MainPage>();
-
-
-
-//#if DEBUG
-//		builder.Logging.AddDebug();
-//#endif
 
 		return builder.Build();
 	}

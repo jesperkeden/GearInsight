@@ -1,4 +1,3 @@
-using GearInsight.Models;
 using GearInsight.Services;
 using GearInsight.ViewModels;
 

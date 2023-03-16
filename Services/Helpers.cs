@@ -1,10 +1,5 @@
 ﻿using GearInsight.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace GearInsight.Services
 {
@@ -59,7 +54,7 @@ namespace GearInsight.Services
 
             if (match.Success)
             {
-                return double.Parse(match.Groups[1].Value); //.Replace(",", "")
+                return double.Parse(match.Groups[1].Value); 
             }
 
             else

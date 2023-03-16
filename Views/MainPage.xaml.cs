@@ -1,7 +1,5 @@
 ﻿using CommunityToolkit.Maui.Core.Primitives;
-using CommunityToolkit.Maui.Views;
 using GearInsight.ViewModels;
-using GearInsight.Views;
 namespace GearInsight;
 
 public partial class MainPage : ContentPage
