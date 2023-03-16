@@ -42,6 +42,8 @@ namespace GearInsight.ViewModels
                 Task GC = Mongo.CreateCharacter(CharacterName, Realm);
                 await GC;               
                 await Shell.Current.GoToAsync(nameof(CharacterPage));
+                CharacterName = null;
+                Realm = null;
             }
             else
             {
